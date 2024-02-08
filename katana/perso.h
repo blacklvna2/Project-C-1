@@ -2,19 +2,22 @@
 #include <iostream>
 #include <string>
 
-
-class perso
+class Perso
 {
 private:
-	int pv;
-	int capaciter_speciale;
+    std::string name;
+    int pv;
+    int capaciter_speciale;
 
 public:
-	perso(int pv, int capaciter_speciale);
-	int getPv();
-	int getCapaciterSpeciale();
-	void setPv(int pv);
-	void setCapaciterSpeciale(int capaciter_speciale);
-	~perso();
+    Perso();
+    Perso(std::string name, int pv, int capaciter_speciale);
+    std::string getName();
+    int getPv();
+    int getCapaciterSpeciale();
+    void setPersoName(std::string name);
+    void setPv(int pv);
+    void setCapaciterSpeciale(int capaciter_speciale);
+    ~Perso();
 };
 

@@ -1,5 +1,9 @@
 #include "role.h"
 
+Role::Role()
+{
+}
+
 Role::Role(std::string name, int honor, int camp, int stars) {
 	this->name = name;
 	this->honor = honor;
@@ -7,7 +11,7 @@ Role::Role(std::string name, int honor, int camp, int stars) {
 	this->stars = stars;
 }
 
-std::string Role::getName() {
+std::string Role::getRoleName() {
 	return name;
 }
 
@@ -23,7 +27,7 @@ int Role::getStars() {
 	return stars;
 }
 
-void Role::setName(std::string name) {
+void Role::setRoleName(std::string name) {
 	this->name = name;
 }
 

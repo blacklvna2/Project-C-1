@@ -1,13 +1,18 @@
 #pragma once
-class playeur
-{
-	public:
-	playeur();
-	~playeur();
+#include <iostream>
+#include <string>
+#include "role.h"
+#include "perso.h"
+
+
+class Playeur : public Role, public Perso {
+public:
+	Playeur(std::string name, std::string status, const Role& role, const Perso& perso);
+	~Playeur();
 	std::string getRole();
 	std::string getName();
 	int getHonor();
-	int getPV();
+	int getPlayerPV();
 	int getPlayeurCapaciterSpeciale();
 	void setRole(std::string role);
 	void setPerso(std::string perso);
@@ -21,8 +26,5 @@ private:
 	std::string status;
 	Role role;
 	Perso perso;
-public:
-	playeur(const std::string& name, const std::string& status, const Role& role, const Perso& perso)
-		: name(name), status(status), role(role), perso(perso)
-};
 
+};

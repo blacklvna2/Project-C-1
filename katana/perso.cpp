@@ -1,20 +1,42 @@
-#include "perso.h"
+#include "Perso.h"
 #include <iostream>
 #include <string>
 
-perso::perso(int pv, int capaciter_speciale) {
+Perso::Perso()
+{
+}
+
+Perso::Perso( std::string name, int pv, int capaciter_speciale) {
+    this->name = name;
     this->pv = pv;
     this->capaciter_speciale = capaciter_speciale;
 }
 
-perso::~perso() {
+Perso::~Perso() {
     // Destructor implementation
 }
 
-int perso::getPv() {
+int Perso::getPv() {
     return pv;
 }
 
-int perso::getCapaciterSpeciale() {
+int Perso::getCapaciterSpeciale() {
     return capaciter_speciale;          // todo: implement function
+}
+
+
+std::string Perso::getName() {
+	return name;          // todo: implement function
+}
+
+void Perso::setPv(int pv) {
+	this->pv = pv;
+}
+
+void Perso::setCapaciterSpeciale(int capaciter_speciale) {
+	this->capaciter_speciale = capaciter_speciale;
+}
+
+void Perso::setPersoName(std::string name) {
+	this->name = name;
 }

@@ -2,20 +2,23 @@
 #include <string>
 #include "role.h"
 #include "perso.h"
+#include "playeur.h"
 
 
 int main() {
     Role myRole("Kenshin", 100, 1, 5);
-    std::cout << "Role Name: " << myRole.getName() << std::endl;
-    std::cout << "Honor: " << myRole.getHonor() << std::endl;
-    std::cout << "Camp: " << myRole.getCamp() << std::endl;
-    std::cout << "Stars: " << myRole.getStars() << std::endl;
+    Perso myPerso( "dieu" , 10, 1);
 
-    // perso
-    perso myPerso(100, 1);  
-    // afficher les pv et capaciter speciale
-    std::cout << "PV: " << myPerso.getPv() << std::endl;
-    std::cout << "Capaciter Speciale: " << myPerso.getCapaciterSpeciale() << std::endl;
 
+    // make me a playeur
+    Playeur myPlayeur("Kenshin", "up", myRole, myPerso);
+    std::cout << "Playeur Name: " << myPlayeur.getName() << std::endl;
+    std::cout << "Playeur capa: " << myPlayeur.getPlayeurCapaciterSpeciale() << std::endl;
+    //get honner
+    std::cout << "Playeur honner: " << myPlayeur.getHonor() << std::endl;
+//get pv
+std::cout << "Playeur pv: " << myPlayeur.getPlayerPV() << std::endl;
+//get getPlayeurCapaciterSpeciale()
+    std::cout << "Playeur capa: " << myPlayeur.getPlayeurCapaciterSpeciale() << std::endl;
     return 0;
 }

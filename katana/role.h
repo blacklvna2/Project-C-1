@@ -13,12 +13,13 @@ private:
 
 public:
 
+	Role();
     Role(std::string name, int honor, int camp, int stars);
-	std::string getName();
+	std::string getRoleName();
 	int getHonor();
 	int getCamp();
 	int getStars();
-	void setName(std::string name);
+	void setRoleName(std::string name);
 	void setHonor(int honor);
 	void setCamp(int camp);
 	void setStars(int stars);
