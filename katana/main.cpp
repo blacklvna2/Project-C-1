@@ -6,12 +6,12 @@
 
 
 int main() {
-    Role myRole("Kenshin", 100, 1, 5);
-    Perso myPerso( "dieu" , 10, 1);
+    Role myRole("Nmrole", 100, 1, 5);
+    Perso myPerso( "Nmperso" , 10, 1);
 
 
     // make me a playeur
-    Playeur myPlayeur("Kenshin", "up", myRole, myPerso);
+    Playeur myPlayeur("Nmjoueur", "up", myRole, myPerso);
     std::cout << "Playeur Name: " << myPlayeur.getName() << std::endl;
     std::cout << "Playeur capa: " << myPlayeur.getPlayeurCapaciterSpeciale() << std::endl;
     //get honner
