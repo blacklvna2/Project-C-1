@@ -5,7 +5,7 @@
 #include "perso.h"
 
 
-class Playeur : public Role, public Perso {
+class Playeur {
 public:
 	Playeur(std::string name, std::string status, const Role& role, const Perso& perso);
 	~Playeur();

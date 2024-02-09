@@ -127,6 +127,10 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="CAction.cpp" />
+    <ClCompile Include="Carte.cpp" />
+    <ClCompile Include="CAttaque.cpp" />
+    <ClCompile Include="CPerma.cpp" />
     <ClCompile Include="DescPerso.cpp" />
     <ClCompile Include="Fonction.cpp" />
     <ClCompile Include="jeu.cpp" />
@@ -139,6 +143,10 @@
     <ClCompile Include="Victoire.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="CAction.h" />
+    <ClInclude Include="Carte.h" />
+    <ClInclude Include="CAttaque.h" />
+    <ClInclude Include="CPerma.h" />
     <ClInclude Include="DescPerso.h" />
     <ClInclude Include="Fonction.h" />
     <ClInclude Include="jeu.h" />

@@ -10,7 +10,7 @@
 #include "Playeur.h"
 #include "perso.h"
 #include "DescPerso.h"
-
+#include "CAttaque.h"
 using namespace std;
 
 int main()
