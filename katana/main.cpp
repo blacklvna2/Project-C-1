@@ -13,12 +13,11 @@
 #include "CAttaque.h"
 using namespace std;
 
-void main()
+int main()
 {
 
-	Titre();
-	Menu();
-	Victoire();
-	//CAttaque CAttaque("C", 10, 100);
-	CAttaque CAttaque1("C", 10, 100);
+Titre();
+Menu();
+Victoire();
+return 0;
 }

@@ -22,6 +22,7 @@ vector<string> askPlayerNames(int numPlayers) {
         playerName = Entre();
         playerNames.push_back(playerName);
 
+
     }
     return playerNames;
 }
@@ -42,7 +43,8 @@ void InitialisationJoueur() {
 }
 
 
-vector<int> NbCarte(int numPlayers) {
+
+vector<int> NbCarte(int numPlayers){
     vector<int> liste;
     switch (numPlayers) {
     case 3:
@@ -65,5 +67,51 @@ vector<int> NbCarte(int numPlayers) {
         break;
     }
     return liste;
-
 }
+
+
+vector<string> rolesPlayer(int numPlayers)
+{
+    vector<string> liste;
+    switch (numPlayers) {
+    case 3:
+        liste = { "shogun", "ninja", "ninja" };
+        break;
+    case 4:
+        liste = { "shogun", "samouraï", "ninja", "ninja" };
+        break;
+    case 5:
+        liste = { "shogun", "samouraï", "ronin", "ninja", "ninja" };
+        break;
+    case 6:
+        liste = { "shogun", "samouraï", "ronin", "ninja", "ninja", "ninja" };
+        break;
+    case 7:
+        liste = { "shogun", "samouraï", "samouraï", "ronin", "ninja", "ninja", "ninja" };
+        break;
+    }
+    return liste;
+}
+   
+
+    int randomRoles(vector<string> liste) {
+        int i = 0;
+		while (liste.size() > 0) {
+			int random = rand() % liste.size();
+			cout << liste[random] << endl;
+			liste.erase(liste.begin() + random);
+            i = random;
+		}
+        return i;
+	}
+
+    void showRoles(){
+        vector<string> nomPlayers = askPlayerNames(getNumberOfPlayers());
+        vector<string> listeRoles = rolesPlayer(getNumberOfPlayers());
+        int valrandom = randomRoles(listeRoles);
+        for (int i = 0; i < nomPlayers.size(); i++) {
+			cout << nomPlayers[i] << " a le role de " << listeRoles[valrandom] << endl;
+
+		}
+
+    }
