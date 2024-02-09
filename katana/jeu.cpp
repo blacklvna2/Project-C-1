@@ -2,13 +2,18 @@
 #include <iostream>
 #include <string>
 #include <list>
+#include "Role.h"
+#include "Perso.h"
 
-jeu::jeu(int nbplayeur)
+jeu::jeu()
 {
-		nbplayer = 0;
-		Role = {""}
-		Personnage = {""}
+}
 
+jeu::jeu(int nbplayeur, std::list<Perso> personnages, std::list<Role> roles)
+{
+    nbplayer = nbplayeur;
+    this->personnages = personnages;
+    this->roles = roles;
 }
 
 jeu::~jeu()
@@ -17,35 +22,30 @@ jeu::~jeu()
 
 int jeu::getnbplayer()
 {
-	return nbplayer;
+    return nbplayer;
 }
 
-void jeu::getrole()
+void jeu::getroles()
 {
-	/*returne liste des role*/
-	return;
+    /*returne liste des role*/
+    return;
 }
 
-void jeu::getpersonnage()
+void jeu::getpersonnages()
 {
 }
 
 void jeu::setnbplayer(int nbplayer)
 {
-	this->nbplayer = nbplayer;
+    this->nbplayer = nbplayer;
 }
 
-void jeu::setrole()
+void jeu::setroles(std::list<Role> Role)
 {
+    this->roles = roles;
 }
 
-void jeu::setpersonnage()
+void jeu::setpersonnages(std::list<Perso> personnages)
 {
+    this->personnages = personnages;
 }
-
-/* atribut of class*/
-// entier joueurnb
-// liste cart pour la piche
-// liste cart deffoce
-// liste role
-// liste personnage

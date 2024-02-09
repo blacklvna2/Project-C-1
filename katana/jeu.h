@@ -2,35 +2,26 @@
 #include <iostream>
 #include <string>
 #include <list>
+#include "Role.h"
+#include "Perso.h"
 
 class jeu
 {
 private:
-	int nbplayer;
+    int nbplayer;
 
-	std::list<std::string> Role;
+    std::list<Role> roles;
 
-	std::list<std::string> Personnage;
+    std::list<Perso> personnages;
 
 public:
-	jeu(int nbplayeur, s);
-	~jeu();
-	int getnbplayer();
-	void getrole();
-	void getpersonnage();
-	void setnbplayer(int nbplayer);
-	void setrole(std::list<);
-	void setpersonnage();
-	
-
-	/* atribut of class 
-	entier joueurnb
-	liste cart pour la piche 
-liste cart deffoce
-liste role 
-liste personnage*/
-	
-
-
+    jeu();
+    jeu(int nbplayer, std::list<Perso> personnages, std::list<Role> roles);
+    ~jeu();
+    int getnbplayer();
+    void getroles();
+    void getpersonnages();
+    void setnbplayer(int nbplayer);
+    void setroles(std::list<Role> roles);
+    void setpersonnages(std::list<Perso> personnages);
 };
-
