@@ -13,11 +13,11 @@
 
 using namespace std;
 
-void main()
+int main()
 {
 
 Titre();
 Menu();
 Victoire();
-
+return 0;
 }
