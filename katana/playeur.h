@@ -10,7 +10,8 @@ class Playeur {
 public:
 	Playeur(const std::string& name,const std::string& status, const Role& role, const Perso& perso);
 	~Playeur();
-	std::string getRole();
+	const Role& getRole();
+	const Perso& getPerso();
 	std::string getName();
 	int getHonor();
 	int getPlayerPV();

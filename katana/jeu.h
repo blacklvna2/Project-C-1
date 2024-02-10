@@ -1,27 +1,32 @@
 #pragma once
 #include <iostream>
 #include <string>
-#include <list>
+#include <vector>
 #include "Role.h"
 #include "Perso.h"
+#include "Carte.h"
+
 
 class Jeu
 {
 private:
     int nbplayer;
 
-    std::list<Role> roles;
+    std::vector<Role> roles;
 
-    std::list<Perso> personnages;
+    std::vector<Perso> personnages;
+    std::vector<Carte> deck;
 
 public:
     Jeu();
-    Jeu(int nbplayer, std::list<Perso> personnages, std::list<Role> roles);
+    Jeu(int nbplayer, std::vector<Perso> personnages, std::vector<Role> roles, std::vector<Carte> deck);
     ~Jeu();
     int getnbplayer();
-    void getroles();
-    void getpersonnages();
+    std::vector<Role> getroles();
+    std::vector<Perso> getpersonnages();
+    std::vector<Carte> getdeck();
     void setnbplayer(int nbplayer);
-    void setroles(std::list<Role> roles);
-    void setpersonnages(std::list<Perso> personnages);
+    void setroles(std::vector<Role> roles);
+    void setpersonnages(std::vector<Perso> personnages);
+    void setdeck(std::vector<Carte> deck);
 };
