@@ -45,7 +45,7 @@
     <ClCompile Include="DescPerso.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
-    <ClCompile Include="CAttaque.cpp">
+    <ClCompile Include="CArme.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
     <ClCompile Include="CPerma.cpp">
@@ -86,7 +86,7 @@
     <ClInclude Include="DescPerso.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
-    <ClInclude Include="CAttaque.h">
+    <ClInclude Include="CArme.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
     <ClInclude Include="CPerma.h">

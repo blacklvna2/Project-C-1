@@ -129,7 +129,7 @@
   <ItemGroup>
     <ClCompile Include="CAction.cpp" />
     <ClCompile Include="Carte.cpp" />
-    <ClCompile Include="CAttaque.cpp" />
+    <ClCompile Include="CArme.cpp" />
     <ClCompile Include="CPerma.cpp" />
     <ClCompile Include="DescPerso.cpp" />
     <ClCompile Include="Fonction.cpp" />
@@ -145,7 +145,7 @@
   <ItemGroup>
     <ClInclude Include="CAction.h" />
     <ClInclude Include="Carte.h" />
-    <ClInclude Include="CAttaque.h" />
+    <ClInclude Include="CArme.h" />
     <ClInclude Include="CPerma.h" />
     <ClInclude Include="DescPerso.h" />
     <ClInclude Include="Fonction.h" />

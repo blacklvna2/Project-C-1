@@ -3,6 +3,15 @@
 
 #include <string>
 
+enum RoleType
+{
+	SAMOURAI,
+	NINJA,
+	RONIN,
+	SHOGUN
+
+};
+
 class Role {
 private:
     std::string name;
@@ -14,7 +23,7 @@ private:
 public:
 
 	Role();
-    Role(std::string name, int honor, int camp, int stars);
+    Role(std::string name,RoleType type, int honor, int camp, int stars);
 	std::string getRoleName();
 	int getHonor();
 	int getCamp();
