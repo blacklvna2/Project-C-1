@@ -9,8 +9,9 @@
 #include "Jeu.h"
 #include <algorithm>
 
-void InitialisationPlayeur(int nbjoueur);
-void InitialisationDeck();
+std::vector<Role> InitialisationPlayeur(int nbjoueur);
+std::vector<Carte> InitialisationDeck();
+std::vector<Perso> initialisationPersonnage();
 
 
 

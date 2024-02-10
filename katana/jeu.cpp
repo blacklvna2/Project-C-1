@@ -1,15 +1,14 @@
 #include "jeu.h"
 #include <iostream>
 #include <string>
-#include <list>
-#include "Role.h"
-#include "Perso.h"
+#include <vector>
+
 
 Jeu::Jeu()
 {
 }
 
-Jeu::Jeu(int nbplayeur, std::list<Perso> personnages, std::list<Role> roles)
+Jeu::Jeu(int nbplayeur, std::vector<Perso> personnages, std::vector<Role> roles, std::vector<Carte> deck)
 {
     nbplayer = nbplayeur;
     this->personnages = personnages;
@@ -25,14 +24,21 @@ int Jeu::getnbplayer()
     return nbplayer;
 }
 
-void Jeu::getroles()
+std::vector<Role> Jeu::getroles()
 {
-    /*returne liste des role*/
-    return;
+    /*returne vectore des role*/
+
+    return roles;
 }
 
-void Jeu::getpersonnages()
+std::vector<Perso> Jeu::getpersonnages()
 {
+	return personnages;
+}
+
+std::vector<Carte> Jeu::getdeck()
+{
+	return deck;
 }
 
 void Jeu::setnbplayer(int nbplayer)
@@ -40,12 +46,17 @@ void Jeu::setnbplayer(int nbplayer)
     this->nbplayer = nbplayer;
 }
 
-void Jeu::setroles(std::list<Role> Role)
+void Jeu::setroles(std::vector<Role> Role)
 {
     this->roles = roles;
 }
 
-void Jeu::setpersonnages(std::list<Perso> personnages)
+void Jeu::setpersonnages(std::vector<Perso> personnages)
 {
     this->personnages = personnages;
+}
+
+void Jeu::setdeck(std::vector<Carte> deck)
+{
+	this->deck = deck;
 }

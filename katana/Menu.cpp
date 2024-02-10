@@ -16,23 +16,38 @@ int Menu()
 	switch (choix)// en int
 	{
 	case 1:
+	{
 		SetConsoleOutputCP(1252);
 		cout << "Vous avez choisi de jouer au jeu" << endl;
-		InitialisationJoueur();
+		std::vector<Perso> personnages = initialisationPersonnage();
+		std::vector<Carte> deck = InitialisationDeck();
+		std::vector<Role> roles = InitialisationPlayeur(3);
+
+		// stockage des decks
+
+		Jeu game(3, personnages, roles, deck);
+	}
 		break;
 	case 2:
+	{
 		SetConsoleOutputCP(1252);
 		cout << "Vous avez choisi de lire les règles" << endl;
 		system("start http://jeuxstrategie1.free.fr/jeu_katana/regle.pdf");
+		Menu();
+	}
 		break;
 	case 3:
+	{
 		SetConsoleOutputCP(1252);
 		cout << "Vous avez choisi de quitter le jeu" << endl;
+	}
 		break;
 	default:
+	{
 		SetConsoleOutputCP(1252);
 		cout << "Vous n'avez pas choisi une option valide" << endl;
 		Menu();
+	}
 		break;
 	}
 

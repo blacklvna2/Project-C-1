@@ -1,7 +1,6 @@
 #include <iostream>
 #include <string>
 #include <vector>
-#include <vector>
 #include <windows.h>
 #include <algorithm>
 #include <random>
@@ -26,13 +25,14 @@ using namespace std;
 int main()
 {
 
-//Titre();
-//Menu();
-//Victoire();
-// make me a vectore of role
-	// make me a vectore of arme
-	//vectore of arme
+    Titre();
+    Menu();
+    Victoire();
+
+    
 
 
-return 0;
+
+
+    return 0;
 }

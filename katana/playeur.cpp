@@ -22,9 +22,14 @@ Playeur::~Playeur()
 {
 }
 
-std::string Playeur::getRole()
+const Role& Playeur::getRole()
 {
-    return role.getRoleName();
+    return role;
+}
+
+const Perso& Playeur::getPerso()
+{
+	return perso;
 }
 
 std::string Playeur::getName()

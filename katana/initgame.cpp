@@ -1,65 +1,132 @@
 #include "initgame.h"
+#include <vector>
 
-void InitialisationPlayeur(int nbjoueur)
+
+using namespace std;
+
+std::vector<Role> InitialisationPlayeur(int nbjoueur)
 {
 	switch (nbjoueur)
 	{
 		case 3:
 		{
-			// make me a liste of role
-			Role SHOGUN("Shogun", SHOGUN, 5, 1, 3);
+			// make me a vectore of role
+            Role SHOGUN("Shogun", RoleType::SHOGUN, 5, 1, 3);
 			Role Ninja1("Ninja", NINJA, 4, 1, 3);
 			Role Ninja2("Ninja", NINJA, 3, 1, 3);
-			// add role to list
-			std::list<Role> roles;
+			// add role to vector
+			std::vector<Role> roles;
 			roles.push_back(SHOGUN);
 			roles.push_back(Ninja1);
 			roles.push_back(Ninja2);
 
-			// affiche mois cette liste
-			std::list<Role>::iterator it;
-			for (it = roles.begin(); it != roles.end(); it++)
-			{
-				std::cout << it->getRoleName() << std::endl;
-			}
+			// affiche mois cette vectore
+			
+			return roles;
 
-			// make me a liste of perso
-			Perso perso1("Kenshin", HANZO, 100, 3);
-			Perso perso2("Kaito", HANZO, 100, 3);
-			Perso perso3("Kaita", HANZO, 100, 3);
 
-			// add perso to list
-			std::list<Perso> personnages;
-			personnages.push_back(perso1);
-			personnages.push_back(perso2);
-			personnages.push_back(perso3);
-
-			// affiche mois cette liste
-			std::list<Perso>::iterator it2;
-			for (it2 = personnages.begin(); it2 != personnages.end(); it2++)
-			{
-				std::cout << it2->getName() << std::endl;
-			}
-
+			
 		}
 			break;
 		case 4:
+		{
+			// make me a vectore of role
+			Role SHOGUN("Shogun", RoleType::SHOGUN, 5, 1, 3);
+			Role Ninja1("Ninja", NINJA, 4, 1, 3);
+			Role Ninja2("Ninja", NINJA, 3, 1, 3);
+			Role Samourai("Samourai", SAMOURAI, 2, 1, 3);
+
+			// add role to vector
+			std::vector<Role> roles;
+			roles.push_back(SHOGUN);
+			roles.push_back(Ninja1);
+			roles.push_back(Ninja2);
+			roles.push_back(Samourai);
+
+			// affiche mois cette vectore
+			std::vector<Role>::iterator it;
 			
+			return roles;
 			break;
+		}
+			
 		case 5:
+		{// make me a vectore of role
+			Role SHOGUN("Shogun", RoleType::SHOGUN, 5, 1, 3);
+			Role Ninja1("Ninja", NINJA, 4, 1, 3);
+			Role Ninja2("Ninja", NINJA, 3, 1, 3);
+			Role Samourai("Samourai", SAMOURAI, 2, 1, 3);
+			Role Ronin("Ronin", RONIN, 1, 1, 3);
+
+			// add role to vector
+			std::vector<Role> roles;
+			roles.push_back(SHOGUN);
+			roles.push_back(Ninja1);
+			roles.push_back(Ninja2);
+			roles.push_back(Samourai);
+			roles.push_back(Ronin);
+
+			// affiche mois cette vectore
+			std::vector<Role>::iterator it;
+			
+		}
 			break;
 		case 6:
+		{
+			// make me a vectore of role
+			Role SHOGUN("Shogun", RoleType::SHOGUN, 5, 1, 3);
+			Role Ninja1("Ninja", NINJA, 4, 1, 3);
+			Role Ninja2("Ninja", NINJA, 3, 1, 3);
+			Role Ninja3("Ninja", NINJA, 2, 1, 3);
+			Role Samourai("Samourai", SAMOURAI, 2, 1, 3);
+			Role Ronin("Ronin", RONIN, 1, 1, 3);
+
+			// add role to vector
+			std::vector<Role> roles;
+			roles.push_back(SHOGUN);
+			roles.push_back(Ninja1);
+			roles.push_back(Ninja2);
+			roles.push_back(Ninja3);
+			roles.push_back(Samourai);
+			roles.push_back(Ronin);
+
+			// affiche mois cette vectore
+			std::vector<Role>::iterator it;
+			
+			return roles;
+		}
 			break;
 		case 7:
+		{
+			// make me a vectore of role
+			Role SHOGUN("Shogun", RoleType::SHOGUN, 5, 1, 3);
+			Role Ninja1("Ninja", NINJA, 4, 1, 3);
+			Role Ninja2("Ninja", NINJA, 3, 1, 3);
+			Role Ninja3("Ninja", NINJA, 2, 1, 3);
+			Role Samourai("Samourai", SAMOURAI, 2, 1, 3);
+			Role Samourai2("Samourai", SAMOURAI, 1, 1, 3);
+			Role Ronin("Ronin", RONIN, 1, 1, 3);
+
+			// add role to vector
+			std::vector<Role> roles;
+			roles.push_back(SHOGUN);
+			roles.push_back(Ninja1);
+			roles.push_back(Ninja2);
+			roles.push_back(Ninja3);
+			roles.push_back(Samourai);
+			roles.push_back(Samourai2);
+			roles.push_back(Ronin);
+			return roles;
+		}
 			break;
 	default:
 		break;
 	}
 }
 
-void InitialisationDeck()
+std::vector<Carte> InitialisationDeck()
 {
-	//liste of arme
+	//vectore of arme
 	std::vector<Carte> cartes;
 	CArme nodachie("Nodachi", NODACHI, 10, 1);
 	CArme Naginata("Naginata", NAGINATA, 15, 1);
@@ -120,11 +187,42 @@ void InitialisationDeck()
 	// shuffle vector
 	random_shuffle(cartes.begin(), cartes.end());
 
+	return cartes;
+}
 
-	//show vectore carte
-	std::vector<Carte>::iterator it5;
-	for (it5 = cartes.begin(); it5 != cartes.end(); it5++)
-	{
-		std::cout << it5->getName() << std::endl;
-	}
+std::vector<Perso> initialisationPersonnage()
+{
+	// make me a vectore of perso
+	Perso Hanzo("Hanz", HANZO, 100, 3);
+	Perso Ushiwaka("Ushiwaka", USHIWAKA, 100, 3);
+	Perso Chyome("Chyome", CHYOME, 100, 3);
+	Perso Hideyoshi("Hideyoshi", HIDEYOSHI, 100, 3);
+	Perso Ginchyo("Ginchyo", GINCHIYO, 100, 3);
+	Perso Goemon("Goemon", GOEMON, 100, 3);
+	Perso Nobunaga("Nobunaga", NOBUNAGA, 100, 3);
+	Perso Tomoe("Tomoe", TOMOE, 100, 3);
+	Perso Ieyasu("Ieyasu", IEYASU, 100, 3);
+	Perso Benkei("Benkei", BENKEI, 100, 3);
+	Perso Musashi("Musashi", MUSASHI, 100, 3);
+	Perso Kojiro("Kojiro", KOJIRO, 100, 3);
+
+	// add perso to vector
+	std::vector<Perso> personnages;
+	personnages.push_back(Hanzo);
+	personnages.push_back(Ushiwaka);
+	personnages.push_back(Chyome);
+	personnages.push_back(Hideyoshi);
+	personnages.push_back(Ginchyo);
+	personnages.push_back(Goemon);
+	personnages.push_back(Nobunaga);
+	personnages.push_back(Tomoe);
+	personnages.push_back(Ieyasu);
+	personnages.push_back(Benkei);
+	personnages.push_back(Musashi);
+	personnages.push_back(Kojiro);
+
+	// randomise le vectore
+	random_shuffle(personnages.begin(), personnages.end());
+
+	return personnages;
 }
