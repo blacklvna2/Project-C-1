@@ -129,10 +129,11 @@
   <ItemGroup>
     <ClCompile Include="CAction.cpp" />
     <ClCompile Include="Carte.cpp" />
-    <ClCompile Include="CAttaque.cpp" />
+    <ClCompile Include="CArme.cpp" />
     <ClCompile Include="CPerma.cpp" />
     <ClCompile Include="DescPerso.cpp" />
     <ClCompile Include="Fonction.cpp" />
+    <ClCompile Include="initgame.cpp" />
     <ClCompile Include="jeu.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Menu.cpp" />
@@ -145,17 +146,22 @@
   <ItemGroup>
     <ClInclude Include="CAction.h" />
     <ClInclude Include="Carte.h" />
-    <ClInclude Include="CAttaque.h" />
+    <ClInclude Include="CArme.h" />
     <ClInclude Include="CPerma.h" />
     <ClInclude Include="DescPerso.h" />
     <ClInclude Include="Fonction.h" />
+    <ClInclude Include="initgame.h" />
     <ClInclude Include="jeu.h" />
     <ClInclude Include="Menu.h" />
     <ClInclude Include="NbJoueur.h" />
     <ClInclude Include="perso.h" />
     <ClInclude Include="playeur.h" />
+    <ClInclude Include="resource.h" />
     <ClInclude Include="role.h" />
     <ClInclude Include="Victoire.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="katana.rc" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

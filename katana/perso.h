@@ -2,6 +2,22 @@
 #include <iostream>
 #include <string>
 
+enum PersoType
+{
+    HANZO,
+    USHIWAKA,
+    CHYOME,
+    HIDEYOSHI,
+    GINCHIYO,
+    GOEMON,
+    NOBUNAGA,
+    TOMOE,
+    IEYASU,
+    BENKEI,
+    MUSASHI,
+    KOJIRO,
+
+};
 class Perso
 {
 private:
@@ -11,7 +27,7 @@ private:
 
 public:
     Perso();
-    Perso(std::string name, int pv, int capaciter_speciale);
+    Perso(std::string name,PersoType type, int pv, int capaciter_speciale);
     std::string getName();
     int getPv();
     int getCapaciterSpeciale();

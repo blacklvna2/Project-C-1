@@ -4,7 +4,7 @@ Role::Role()
 {
 }
 
-Role::Role(std::string name, int honor, int camp, int stars) {
+Role::Role(std::string name,RoleType type, int honor, int camp, int stars) {
 	this->name = name;
 	this->honor = honor;
 	this->camp = camp;

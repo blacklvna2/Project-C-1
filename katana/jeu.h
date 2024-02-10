@@ -5,7 +5,7 @@
 #include "Role.h"
 #include "Perso.h"
 
-class jeu
+class Jeu
 {
 private:
     int nbplayer;
@@ -15,9 +15,9 @@ private:
     std::list<Perso> personnages;
 
 public:
-    jeu();
-    jeu(int nbplayer, std::list<Perso> personnages, std::list<Role> roles);
-    ~jeu();
+    Jeu();
+    Jeu(int nbplayer, std::list<Perso> personnages, std::list<Role> roles);
+    ~Jeu();
     int getnbplayer();
     void getroles();
     void getpersonnages();

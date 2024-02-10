@@ -6,7 +6,7 @@ Perso::Perso()
 {
 }
 
-Perso::Perso( std::string name, int pv, int capaciter_speciale) {
+Perso::Perso( std::string name, PersoType type, int pv, int capaciter_speciale) {
     this->name = name;
     this->pv = pv;
     this->capaciter_speciale = capaciter_speciale;
