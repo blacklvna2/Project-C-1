@@ -1,6 +1,7 @@
 #include <iostream>
 #include <string>
 #include <vector>
+#include <list>
 #include <windows.h>
 #include "Menu.h"
 #include "fonction.h"
@@ -11,6 +12,9 @@
 #include "perso.h"
 #include "DescPerso.h"
 #include "CAttaque.h"
+#include "Jeu.h"
+#include "CAction.h"
+#include "CPerma.h"
 using namespace std;
 
 int main()
@@ -64,9 +68,70 @@ for (it2 = personnages.begin(); it2 != personnages.end(); it2++)
 }
 
 // make me a liste of playeur
-Playeur playeur1("Kens", 100, perso1, role1);
-Playeur playeur2("Kai", 100, perso2, role2);
-Playeur playeur3("Kaz", 100, perso3, role3);
+
+Playeur playeur1("Kenshin", "Vivant", role1, perso1);
+Playeur playeur2("Kaito", "Vivant", role2, perso2);
+Playeur playeur3("Kazuma", "Vivant", role3, perso3);
+
+// ajoute les playeur a la liste
+std::list<Playeur> playeurs;
+playeurs.push_back(playeur1);
+playeurs.push_back(playeur2);
+playeurs.push_back(playeur3);
+
+// affiche mois cette liste
+std::list<Playeur>::iterator it3;
+for (it3 = playeurs.begin(); it3 != playeurs.end(); it3++)
+{
+	std::cout << it3->getName() << std::endl;
+}
+
+// conte le nombre de playeur
+std::cout << "le nombre de playeur est: " << playeurs.size() << std::endl;
+// fais moi un jeu
+Jeu jeu(playeurs.size(), personnages, roles);
+std::cout << jeu.getnbplayer() << std::endl;
+
+// fais moi des cart action
+CAction CAction1("test", BATTLE_CRY, 10, 10, true, true, 10, 10, true);
+
+std::cout << CAction1.getName() << std::endl;
+std::cout << CAction1.getDegat() << std::endl;
+std::cout << CAction1.getHorreurPoint() << std::endl;
+std::cout << CAction1.getPermanent() << std::endl;
+std::cout << CAction1.getPlayerViser() << std::endl;
+std::cout << CAction1.getPointDeVie() << std::endl;
+std::cout << CAction1.getNombreDeCartePiocher() << std::endl;
+std::cout << CAction1.getHasard() << std::endl;
+
+// fais moi des cart attaque
+
+CAttaque CAttaque1("test", 10, 10);
+std::cout << CAttaque1.getName() << std::endl;
+std::cout << CAttaque1.getDegat() << std::endl;
+std::cout << CAttaque1.getPrecision() << std::endl;
+
+// fais moi une carte permanente
+CPerma CartePermanente1("Cart", ARMURE, 0, 0, 1, 1, true);
+std::cout << CartePermanente1.getName() << std::endl;
+std::cout << CartePermanente1.getDegatSupplementaire() << std::endl;
+std::cout << CartePermanente1.getDifficulterDataque() << std::endl;
+std::cout << CartePermanente1.getArmesupplementaire() << std::endl;
+std::cout << CartePermanente1.getPlacementDeCarte() << std::endl;
+std::cout << CartePermanente1.getFinDeTourPioche() << std::endl;
+
+
+// fais moi une carte attaque
+CAttaque CarteAttaque1("Cart", 10, 10);
+std::cout << CarteAttaque1.getName() << std::endl;
+std::cout << CarteAttaque1.getDegat() << std::endl;
+std::cout << CarteAttaque1.getPrecision() << std::endl;
+
+
+
+
+
+
 
 return 0;
 }

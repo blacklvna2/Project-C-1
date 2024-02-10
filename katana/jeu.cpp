@@ -5,47 +5,47 @@
 #include "Role.h"
 #include "Perso.h"
 
-jeu::jeu()
+Jeu::Jeu()
 {
 }
 
-jeu::jeu(int nbplayeur, std::list<Perso> personnages, std::list<Role> roles)
+Jeu::Jeu(int nbplayeur, std::list<Perso> personnages, std::list<Role> roles)
 {
     nbplayer = nbplayeur;
     this->personnages = personnages;
     this->roles = roles;
 }
 
-jeu::~jeu()
+Jeu::~Jeu()
 {
 }
 
-int jeu::getnbplayer()
+int Jeu::getnbplayer()
 {
     return nbplayer;
 }
 
-void jeu::getroles()
+void Jeu::getroles()
 {
     /*returne liste des role*/
     return;
 }
 
-void jeu::getpersonnages()
+void Jeu::getpersonnages()
 {
 }
 
-void jeu::setnbplayer(int nbplayer)
+void Jeu::setnbplayer(int nbplayer)
 {
     this->nbplayer = nbplayer;
 }
 
-void jeu::setroles(std::list<Role> Role)
+void Jeu::setroles(std::list<Role> Role)
 {
     this->roles = roles;
 }
 
-void jeu::setpersonnages(std::list<Perso> personnages)
+void Jeu::setpersonnages(std::list<Perso> personnages)
 {
     this->personnages = personnages;
 }

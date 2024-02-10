@@ -1,12 +1,21 @@
 #include "Playeur.h"
 #include "role.h"
+#include "perso.h"
 #include <iostream>
 #include <string>
 
 
-Playeur::Playeur(std::string name, std::string status, const Role& role, const Perso& perso) 
+
+Playeur::Playeur(const std::string& name,const std::string& status, const Role& role, const Perso& perso)
     : name(name), status(status), role(role), perso(perso)
 {
+    //initialiser moi les membres ici
+    this->name = name;
+    this->status = status;
+    this->role = Role();
+    this->perso = Perso();
+    
+
 }
 
 Playeur::~Playeur()
@@ -38,17 +47,17 @@ int Playeur::getPlayeurCapaciterSpeciale()
     return perso.getCapaciterSpeciale();
 }
 
-void Playeur::setRole(std::string role)
+void Playeur::setRole(std::string& role)
 {
     this->role.setRoleName(role);
 }
 
-void Playeur::setPerso(std::string perso)
+void Playeur::setPerso(std::string& perso)
 {
     this->perso.setPersoName(perso);
 }
 
-void Playeur::setName(std::string name)
+void Playeur::setName(std::string& name)
 {
     this->name = name;
 }
