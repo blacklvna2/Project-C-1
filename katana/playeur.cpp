@@ -1,5 +1,4 @@
 #include "Playeur.h"
-#include "perso.h"
 #include "role.h"
 #include <iostream>
 #include <string>
