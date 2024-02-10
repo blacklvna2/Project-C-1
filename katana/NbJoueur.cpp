@@ -21,6 +21,7 @@ vector<string> askPlayerNames(int numPlayers) {
         cout << "Entrez le nom du joueur " << i + 1 << " : ";
         playerName = Entre();
         playerNames.push_back(playerName);
+        
 
 
     }

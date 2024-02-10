@@ -17,8 +17,8 @@ private:
 	int DegatSupplementaire;// Attaque rapide
     int DifficulterDataque;// Armure
     int Armesupplementaire;// Consentration
-    int PlacementDeCarte;
-    bool finDeTourPioche;
+    int PlacementDeCarte;// Code du bushido
+    bool finDeTourPioche;// Code du bushido
 
 public:
     CPerma(std::string name, PermanentType type, int DegatSupplementaire, int DifficulterDataque, int Armesupplementaire, int PlacementDeCarte, bool finDeTourPioche);
@@ -36,14 +36,4 @@ public:
 	void setArmesupplementaire(int Armesupplementaire);
 	void setPlacementDeCarte(int PlacementDeCarte);
 	void setFinDeTourPioche(bool finDeTourPioche);
-
-
-
-
- 
-
-
-
-
-
 };

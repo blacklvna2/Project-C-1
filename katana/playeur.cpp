@@ -12,8 +12,8 @@ Playeur::Playeur(const std::string& name,const std::string& status, const Role& 
     //initialiser moi les membres ici
     this->name = name;
     this->status = status;
-    this->role = Role();
-    this->perso = Perso();
+    this->role = role;
+    this->perso = perso;
     
 
 }
@@ -47,14 +47,14 @@ int Playeur::getPlayeurCapaciterSpeciale()
     return perso.getCapaciterSpeciale();
 }
 
-void Playeur::setRole(std::string& role)
+void Playeur::setRole(const Role& role)
 {
-    this->role.setRoleName(role);
+    this->role = role;
 }
 
-void Playeur::setPerso(std::string& perso)
+void Playeur::setPerso(const Perso& perso)
 {
-    this->perso.setPersoName(perso);
+    this->perso = perso;
 }
 
 void Playeur::setName(std::string& name)
@@ -64,15 +64,15 @@ void Playeur::setName(std::string& name)
 
 void Playeur::setHonor(int honor)
 {
-    this->role.setHonor(honor);
+    role.setHonor(honor);
 }
 
 void Playeur::setPlayerPV(int pv)
 {
-    this->perso.setPv(pv);
+    perso.setPv(pv);
 }
 
 void Playeur::setCapaciterSpeciale(int capaciterSpeciale)
 {
-    this->perso.setCapaciterSpeciale(capaciterSpeciale);
+    perso.setCapaciterSpeciale(capaciterSpeciale);
 }

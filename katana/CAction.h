@@ -3,7 +3,7 @@
 #include "Carte.h"
 
 enum ActionType {
-	BATTLE_CRY,
+	CRIEDEGUERRE,
 	DAIMYO,
 	DIVERSION,
 	GEISHA,
@@ -40,6 +40,5 @@ public:
 	void setPointDeVie(int pointdevie);
 	void setNombreDeCartePiocher(int nombredecartepiocher);
 	void setHasard(bool hasard);
-
 };
 

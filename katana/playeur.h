@@ -15,8 +15,8 @@ public:
 	int getHonor();
 	int getPlayerPV();
 	int getPlayeurCapaciterSpeciale();
-	void setRole(std::string& role);
-	void setPerso(std::string& perso);
+	void setRole(const Role& role);
+	void setPerso(const Perso& perso);
 	void setName(std::string& name);
 	void setHonor(int honor);
 	void setPlayerPV(int pv);

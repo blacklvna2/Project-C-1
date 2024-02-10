@@ -37,6 +37,4 @@ public:
 	~CArme();
 	void setDegat(int degat);
 	void setPrecision(int precision);
-
-
 };
