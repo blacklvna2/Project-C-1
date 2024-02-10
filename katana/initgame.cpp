@@ -41,7 +41,6 @@ void InitialisationPlayeur(int nbjoueur)
 				std::cout << it2->getName() << std::endl;
 			}
 
-			
 		}
 			break;
 		case 4:
