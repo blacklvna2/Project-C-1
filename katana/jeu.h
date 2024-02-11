@@ -11,9 +11,7 @@ class Jeu
 {
 private:
     int nbplayer;
-
     std::vector<Role> roles;
-
     std::vector<Perso> personnages;
     std::vector<Carte> deck;
 

@@ -2,6 +2,7 @@
 #include <iostream>
 #include <string>
 using namespace std;
+
 CArme::CArme(string name,ArmeType type, int degat, int precision) : Carte(name) {
 	this->degat = degat;
 	this->precision = precision;

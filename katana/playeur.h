@@ -3,31 +3,33 @@
 #include <string>
 #include "role.h"
 #include "perso.h"
-#include <list>
+#include "Carte.h"
+#include <vector>
+
 
 
 class Playeur {
 public:
-	Playeur(const std::string& name,const std::string& status, const Role& role, const Perso& perso);
+	Playeur(const std::string& name,const std::string& status,Role& role, const Perso& perso, std::vector<Carte>& DeckPlayer, int id);
 	~Playeur();
-	const Role& getRole();
+	Role& getRole();
 	const Perso& getPerso();
 	std::string getName();
-	int getHonor();
-	int getPlayerPV();
-	int getPlayeurCapaciterSpeciale();
-	void setRole(const Role& role);
+	std::string getStatus();
+	std::vector<Carte> getDeckPlayer();
+	int getId();
+	void setRole(Role& role);
 	void setPerso(const Perso& perso);
 	void setName(std::string& name);
-	void setHonor(int honor);
-	void setPlayerPV(int pv);
-	void setCapaciterSpeciale(int capaciterSpeciale);
+	void setStatus(std::string& status);
+	void setDeckPlayer(std::vector<Carte> DeckPlayer);
+	void setId(int id);
 
 private:
 	std::string name;
 	std::string status;
 	Role role;
 	Perso perso;
-	
-
+	std::vector<Carte> DeckPlayer;
+	int id;
 };

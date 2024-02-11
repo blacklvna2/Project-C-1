@@ -19,13 +19,8 @@ int Menu()
 	{
 		SetConsoleOutputCP(1252);
 		cout << "Vous avez choisi de jouer au jeu" << endl;
-		std::vector<Perso> personnages = initialisationPersonnage();
-		std::vector<Carte> deck = InitialisationDeck();
-		std::vector<Role> roles = InitialisationPlayeur(3);
+		InitialisationJoueur();
 
-		// stockage des decks
-
-		Jeu game(3, personnages, roles, deck);
 	}
 		break;
 	case 2:
