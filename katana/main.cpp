@@ -26,9 +26,11 @@ using namespace std;
 int main()
 {
 
-    Titre();
+    /*Titre();
     Menu();
-    Victoire();
+    Victoire();*/
+    Carte carte("test");
+    cout << carte.getName() << endl;
 
     return 0;
 }
