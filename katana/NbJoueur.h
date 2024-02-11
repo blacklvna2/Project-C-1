@@ -1,11 +1,11 @@
 #pragma once
 #include <vector>
 #include <string>
+#include "Jeu.h"
+#include "Playeur.h"
+
 using namespace std;
-int getNumberOfPlayers();
-vector<string> askPlayerNames(int numPlayers);
-void displayPlayerNames(const vector<string>& playerNames);
+int nbPlayers();
 void InitialisationJoueur();
-vector<int> NbCarte(int numPlayers);
-vector<string> rolesPlayer(int numPlayers);
+
 

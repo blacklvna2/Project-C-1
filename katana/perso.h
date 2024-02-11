@@ -15,9 +15,9 @@ enum PersoType
     IEYASU,
     BENKEI,
     MUSASHI,
-    KOJIRO,
-
+    KOJIRO
 };
+
 class Perso
 {
 private:

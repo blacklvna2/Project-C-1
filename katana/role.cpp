@@ -15,6 +15,11 @@ std::string Role::getRoleName() {
 	return name;
 }
 
+RoleType Role::getRoleType()
+{
+	return RoleType();
+}
+
 int Role::getHonor() {
 	return honor;
 }
@@ -42,3 +47,5 @@ void Role::setCamp(int camp) {
 void Role::setStars(int stars) {
 	this->stars = stars;
 }
+
+

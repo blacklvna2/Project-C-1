@@ -3,56 +3,62 @@
 #include "perso.h"
 #include <iostream>
 #include <string>
+#include <vector>
+#include "Carte.h"
+#include "jeu.h"
+
+using namespace std;
+
+// Function to get a subset of the deck player
 
 
-
-Playeur::Playeur(const std::string& name,const std::string& status, const Role& role, const Perso& perso)
-    : name(name), status(status), role(role), perso(perso)
+Playeur::Playeur(const string& name,const string& status, Role& role, const Perso& perso, vector<Carte>& DeckPlayer, int id)
+    : name(name), status(status), role(role), perso(perso), DeckPlayer(DeckPlayer), id(id)
 {
     //initialiser moi les membres ici
     this->name = name;
     this->status = status;
     this->role = role;
     this->perso = perso;
-    
-
+    this->DeckPlayer = DeckPlayer;
+    this->id = id;
 }
 
 Playeur::~Playeur()
 {
 }
 
-const Role& Playeur::getRole()
+Role& Playeur::getRole()
 {
     return role;
 }
 
 const Perso& Playeur::getPerso()
 {
-	return perso;
+    return perso;
 }
 
-std::string Playeur::getName()
+string Playeur::getName()
 {
     return name;
 }
 
-int Playeur::getHonor()
+string Playeur::getStatus()
 {
-    return role.getHonor();
+    return status;
 }
 
-int Playeur::getPlayerPV()
+vector<Carte> Playeur::getDeckPlayer()
 {
-    return perso.getPv();
+    return DeckPlayer;
 }
 
-int Playeur::getPlayeurCapaciterSpeciale()
+int Playeur::getId()
 {
-    return perso.getCapaciterSpeciale();
+    return id;
 }
 
-void Playeur::setRole(const Role& role)
+void Playeur::setRole(Role& role)
 {
     this->role = role;
 }
@@ -62,22 +68,25 @@ void Playeur::setPerso(const Perso& perso)
     this->perso = perso;
 }
 
-void Playeur::setName(std::string& name)
+void Playeur::setName(string& name)
 {
     this->name = name;
 }
 
-void Playeur::setHonor(int honor)
+void Playeur::setStatus(string& status)
 {
-    role.setHonor(honor);
+    this->status = status;
 }
 
-void Playeur::setPlayerPV(int pv)
+void Playeur::setDeckPlayer(vector<Carte> DeckPlayer)
 {
-    perso.setPv(pv);
+    //si le joueur et shogune prend les 4 premier carte du deck est est les supprime
+    
+    this->DeckPlayer = DeckPlayer;
+
 }
 
-void Playeur::setCapaciterSpeciale(int capaciterSpeciale)
+void Playeur::setId(int id)
 {
-    perso.setCapaciterSpeciale(capaciterSpeciale);
+    	this->id = id;
 }

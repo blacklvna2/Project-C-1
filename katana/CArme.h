@@ -24,7 +24,6 @@ enum ArmeType {
 class CArme : public Carte
 {
 private:
-
 	ArmeType type;
 	int degat;
 	int precision;

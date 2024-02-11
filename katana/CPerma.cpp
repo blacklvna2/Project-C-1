@@ -2,11 +2,6 @@
 #include <iostream>
 #include <string>
 
-
-
-
-
-
 CPerma::CPerma(std::string name, PermanentType type, int DegatSupplementaire, int DifficulterDataque, int Armesupplementaire, int PlacementDeCarte, bool finDeTourPioche) : Carte(name) {
 	this->type = type;
 	this->DegatSupplementaire = DegatSupplementaire;

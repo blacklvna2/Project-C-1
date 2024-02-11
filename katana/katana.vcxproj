@@ -132,6 +132,8 @@
     <ClCompile Include="CArme.cpp" />
     <ClCompile Include="CPerma.cpp" />
     <ClCompile Include="DescPerso.cpp" />
+    <ClCompile Include="distancePlayeur.cpp" />
+    <ClCompile Include="distancePlayeur.h" />
     <ClCompile Include="Fonction.cpp" />
     <ClCompile Include="initgame.cpp" />
     <ClCompile Include="jeu.cpp" />
@@ -141,6 +143,7 @@
     <ClCompile Include="perso.cpp" />
     <ClCompile Include="playeur.cpp" />
     <ClCompile Include="role.cpp" />
+    <ClCompile Include="tourPlayeur.cpp" />
     <ClCompile Include="Victoire.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -158,6 +161,7 @@
     <ClInclude Include="playeur.h" />
     <ClInclude Include="resource.h" />
     <ClInclude Include="role.h" />
+    <ClInclude Include="tourPlayeur.h" />
     <ClInclude Include="Victoire.h" />
   </ItemGroup>
   <ItemGroup>

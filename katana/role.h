@@ -9,7 +9,6 @@ enum RoleType
 	NINJA,
 	RONIN,
 	SHOGUN
-
 };
 
 class Role {
@@ -23,8 +22,9 @@ private:
 public:
 
 	Role();
-    Role(std::string name,RoleType type, int honor, int camp, int stars);
+    Role(std::string name,RoleType type, int honor, int camp, int stars); //todo camp string
 	std::string getRoleName();
+	RoleType getRoleType();
 	int getHonor();
 	int getCamp();
 	int getStars();
@@ -32,8 +32,6 @@ public:
 	void setHonor(int honor);
 	void setCamp(int camp);
 	void setStars(int stars);
-
-
 
 };
 

@@ -1,162 +1,257 @@
 #include "initgame.h"
 #include <vector>
+#include "role.h"
+#include "perso.h"
+#include <string>
 
 
 using namespace std;
 
-std::vector<Role> InitialisationPlayeur(int nbjoueur)
+vector<Role> InitialisationRole(int nbjoueur)
 {
 	switch (nbjoueur)
 	{
-		case 3:
-		{
-			// make me a vectore of role
-            Role SHOGUN("Shogun", RoleType::SHOGUN, 5, 1, 3);
-			Role Ninja1("Ninja", NINJA, 4, 1, 3);
-			Role Ninja2("Ninja", NINJA, 3, 1, 3);
-			// add role to vector
-			std::vector<Role> roles;
-			roles.push_back(SHOGUN);
-			roles.push_back(Ninja1);
-			roles.push_back(Ninja2);
-
-			// affiche mois cette vectore
-			
-			return roles;
+	case 3:
+	{
+		//todo liste shuffule 1 a 3 for ninja 
+		// make me a vectore of role
+		Role SHOGUN("Shogun", RoleType::SHOGUN, 5, 1, 3);
+		Role Ninja1("Ninja", NINJA, 4, 1, 3);
+		Role Ninja2("Ninja", NINJA, 3, 1, 3);
+		// add role to vector
+		vector<Role> roles;
+		roles.push_back(SHOGUN);
+		roles.push_back(Ninja1);
+		roles.push_back(Ninja2);
 
 
-			
-		}
-			break;
-		case 4:
-		{
-			// make me a vectore of role
-			Role SHOGUN("Shogun", RoleType::SHOGUN, 5, 1, 3);
-			Role Ninja1("Ninja", NINJA, 4, 1, 3);
-			Role Ninja2("Ninja", NINJA, 3, 1, 3);
-			Role Samourai("Samourai", SAMOURAI, 2, 1, 3);
 
-			// add role to vector
-			std::vector<Role> roles;
-			roles.push_back(SHOGUN);
-			roles.push_back(Ninja1);
-			roles.push_back(Ninja2);
-			roles.push_back(Samourai);
+		return roles;
 
-			// affiche mois cette vectore
-			std::vector<Role>::iterator it;
-			
-			return roles;
-			break;
-		}
-			
-		case 5:
-		{// make me a vectore of role
-			Role SHOGUN("Shogun", RoleType::SHOGUN, 5, 1, 3);
-			Role Ninja1("Ninja", NINJA, 4, 1, 3);
-			Role Ninja2("Ninja", NINJA, 3, 1, 3);
-			Role Samourai("Samourai", SAMOURAI, 2, 1, 3);
-			Role Ronin("Ronin", RONIN, 1, 1, 3);
 
-			// add role to vector
-			std::vector<Role> roles;
-			roles.push_back(SHOGUN);
-			roles.push_back(Ninja1);
-			roles.push_back(Ninja2);
-			roles.push_back(Samourai);
-			roles.push_back(Ronin);
 
-			// affiche mois cette vectore
-			std::vector<Role>::iterator it;
-			
-		}
-			break;
-		case 6:
-		{
-			// make me a vectore of role
-			Role SHOGUN("Shogun", RoleType::SHOGUN, 5, 1, 3);
-			Role Ninja1("Ninja", NINJA, 4, 1, 3);
-			Role Ninja2("Ninja", NINJA, 3, 1, 3);
-			Role Ninja3("Ninja", NINJA, 2, 1, 3);
-			Role Samourai("Samourai", SAMOURAI, 2, 1, 3);
-			Role Ronin("Ronin", RONIN, 1, 1, 3);
+	}
+	break;
+	case 4:
+	{
+		// make me a vectore of role
+		Role SHOGUN("Shogun", RoleType::SHOGUN, 5, 1, 3);
+		Role Ninja1("Ninja", NINJA, 4, 1, 3);
+		Role Ninja2("Ninja", NINJA, 3, 1, 3);
+		Role Samourai("Samourai", SAMOURAI, 2, 1, 3);
 
-			// add role to vector
-			std::vector<Role> roles;
-			roles.push_back(SHOGUN);
-			roles.push_back(Ninja1);
-			roles.push_back(Ninja2);
-			roles.push_back(Ninja3);
-			roles.push_back(Samourai);
-			roles.push_back(Ronin);
+		// add role to vector
+		vector<Role> roles;
+		roles.push_back(SHOGUN);
+		roles.push_back(Ninja1);
+		roles.push_back(Ninja2);
+		roles.push_back(Samourai);
 
-			// affiche mois cette vectore
-			std::vector<Role>::iterator it;
-			
-			return roles;
-		}
-			break;
-		case 7:
-		{
-			// make me a vectore of role
-			Role SHOGUN("Shogun", RoleType::SHOGUN, 5, 1, 3);
-			Role Ninja1("Ninja", NINJA, 4, 1, 3);
-			Role Ninja2("Ninja", NINJA, 3, 1, 3);
-			Role Ninja3("Ninja", NINJA, 2, 1, 3);
-			Role Samourai("Samourai", SAMOURAI, 2, 1, 3);
-			Role Samourai2("Samourai", SAMOURAI, 1, 1, 3);
-			Role Ronin("Ronin", RONIN, 1, 1, 3);
+		// affiche mois cette vectore
 
-			// add role to vector
-			std::vector<Role> roles;
-			roles.push_back(SHOGUN);
-			roles.push_back(Ninja1);
-			roles.push_back(Ninja2);
-			roles.push_back(Ninja3);
-			roles.push_back(Samourai);
-			roles.push_back(Samourai2);
-			roles.push_back(Ronin);
-			return roles;
-		}
-			break;
+		return roles;
+		break;
+	}
+
+	case 5:
+	{// make me a vectore of role
+		Role SHOGUN("Shogun", RoleType::SHOGUN, 5, 1, 3);
+		Role Ninja1("Ninja", NINJA, 4, 1, 3);
+		Role Ninja2("Ninja", NINJA, 3, 1, 3);
+		Role Samourai("Samourai", SAMOURAI, 2, 1, 3);
+		Role Ronin("Ronin", RONIN, 1, 1, 3);
+
+		// add role to vector
+		vector<Role> roles;
+		roles.push_back(SHOGUN);
+		roles.push_back(Ninja1);
+		roles.push_back(Ninja2);
+		roles.push_back(Samourai);
+		roles.push_back(Ronin);
+
+
+
+	}
+	break;
+	case 6:
+	{
+		// make me a vectore of role
+		Role SHOGUN("Shogun", RoleType::SHOGUN, 5, 1, 3);
+		Role Ninja1("Ninja", NINJA, 4, 1, 3);
+		Role Ninja2("Ninja", NINJA, 3, 1, 3);
+		Role Ninja3("Ninja", NINJA, 2, 1, 3);
+		Role Samourai("Samourai", SAMOURAI, 2, 1, 3);
+		Role Ronin("Ronin", RONIN, 1, 1, 3);
+
+		// add role to vector
+		vector<Role> roles;
+		roles.push_back(SHOGUN);
+		roles.push_back(Ninja1);
+		roles.push_back(Ninja2);
+		roles.push_back(Ninja3);
+		roles.push_back(Samourai);
+		roles.push_back(Ronin);
+
+
+
+		return roles;
+	}
+	break;
+	case 7:
+	{
+		// make me a vectore of role
+		Role SHOGUN("Shogun", RoleType::SHOGUN, 5, 1, 3);
+		Role Ninja1("Ninja", NINJA, 4, 1, 3);
+		Role Ninja2("Ninja", NINJA, 3, 1, 3);
+		Role Ninja3("Ninja", NINJA, 2, 1, 3);
+		Role Samourai("Samourai", SAMOURAI, 2, 1, 3);
+		Role Samourai2("Samourai", SAMOURAI, 1, 1, 3);
+		Role Ronin("Ronin", RONIN, 1, 1, 3);
+
+		// add role to vector
+		vector<Role> roles;
+		roles.push_back(SHOGUN);
+		roles.push_back(Ninja1);
+		roles.push_back(Ninja2);
+		roles.push_back(Ninja3);
+		roles.push_back(Samourai);
+		roles.push_back(Samourai2);
+		roles.push_back(Ronin);
+		return roles;
+	}
+	break;
 	default:
 		break;
 	}
 }
 
-std::vector<Carte> InitialisationDeck()
+vector<Carte> InitialisationDeck()
 {
 	//vectore of arme
-	std::vector<Carte> cartes;
+	// add bonne valeur
+	vector<Carte> cartes;
 	CArme nodachie("Nodachi", NODACHI, 10, 1);
+	CArme nodachie2("Nodachi", NODACHI, 10, 1);
+	CArme nodachie3("Nodachi", NODACHI, 10, 1);
+	CArme nodachie4("Nodachi", NODACHI, 10, 1);
+	
 	CArme Naginata("Naginata", NAGINATA, 15, 1);
+	CArme Naginata2("Naginata", NAGINATA, 15, 1);
+	CArme Naginata3("Naginata", NAGINATA, 15, 1);
+	CArme Naginata4("Naginata", NAGINATA, 15, 1);
+
 	CArme Nagayari("Nagayari", NAGAYARI, 25, 1);
+	CArme Nagayari2("Nagayari", NAGAYARI, 25, 1);
+	CArme Nagayari3("Nagayari", NAGAYARI, 25, 1);
+	CArme Nagayari4("Nagayari", NAGAYARI, 25, 1);
+	
 	CArme Tanegashima("Tanegashima", TANEGASHIMA, 30, 1);
+	CArme Tanegashima2("Tanegashima", TANEGASHIMA, 30, 1);
+	CArme Tanegashima3("Tanegashima", TANEGASHIMA, 30, 1);
+
 	CArme Daikyu("Daikyu", DAIKYU, 35, 1);
+	CArme Daikyu2("Daikyu", DAIKYU, 35, 1);
+	CArme Daikyu3("Daikyu", DAIKYU, 35, 1);
+	
 	CArme Bo("Bo", BO, 40, 1);
+	CArme Bo2("Bo", BO, 40, 1);
+	CArme Bo3("Bo", BO, 40, 1);
+	CArme Bo4("Bo", BO, 40, 1);
+
 	CArme Kusarigama("Kusarigama", KUSARIGAMA, 20, 1);
+	CArme Kusarigama2("Kusarigama", KUSARIGAMA, 20, 1);
+	CArme Kusarigama3("Kusarigama", KUSARIGAMA, 20, 1);
+	CArme Kusaigama4("Kusarigama", KUSARIGAMA, 20, 1);
+
 	CArme Katana("Katana", KATANA, 10, 1);
+	CArme Katana2("Katana", KATANA, 10, 1);
+	CArme Katana3("Katana", KATANA, 10, 1);
+	CArme Katana4("Katana", KATANA, 10, 1);
+
+
 	CArme Shuriken("Shuriken", SHURIKEN, 5, 1);
+	CArme Shuriken2("Shuriken", SHURIKEN, 5, 1);
+	CArme Shuriken3("Shuriken", SHURIKEN, 5, 1);
+	CArme Shuriken4("Shuriken", SHURIKEN, 5, 1);
+
 	CArme Kanabo("Kanabo", KANABO, 45, 1);
+	CArme Kanabo2("Kanabo", KANABO, 45, 1);
+	CArme Kanabo3("Kanabo", KANABO, 45, 1);
+	CArme Kanabo4("Kanabo", KANABO, 45, 1);
+
 	CArme Bokken("Bokken", BOKKEN, 50, 1);
+	CArme Bokken2("Bokken", BOKKEN, 50, 1);
+	CArme Bokken3("Bokken", BOKKEN, 50, 1);
+	CArme Bokken4("Bokken", BOKKEN, 50, 1);
+	
 	CArme Kiseru("Kiseru", KISERU, 55, 1);
+	CArme Kiseru2("Kiseru", KISERU, 55, 1);
+	CArme Kiserru3("Kiseru", KISERU, 55, 1);
+
 	CArme Wakizashi("Wakizashi", WAKIZASHI, 60, 1);
 
 
 	// add arme to vector
 	cartes.push_back(nodachie);
+	cartes.push_back(nodachie2);
+	cartes.push_back(nodachie3);
+	cartes.push_back(nodachie4);
+	
 	cartes.push_back(Naginata);
+	cartes.push_back(Naginata2);
+	cartes.push_back(Naginata3);
+	cartes.push_back(Naginata4);
+
 	cartes.push_back(Nagayari);
+	cartes.push_back(Nagayari2);
+	cartes.push_back(Nagayari3);
+	cartes.push_back(Nagayari4);
+
 	cartes.push_back(Tanegashima);
+	cartes.push_back(Tanegashima2);
+	cartes.push_back(Tanegashima3);
+
 	cartes.push_back(Daikyu);
+	cartes.push_back(Daikyu2);
+	cartes.push_back(Daikyu3);
+
 	cartes.push_back(Bo);
+	cartes.push_back(Bo2);
+	cartes.push_back(Bo3);
+	cartes.push_back(Bo4);
+
 	cartes.push_back(Kusarigama);
+	cartes.push_back(Kusarigama2);
+	cartes.push_back(Kusarigama3);
+	cartes.push_back(Kusaigama4);
+
 	cartes.push_back(Katana);
+	cartes.push_back(Katana2);
+	cartes.push_back(Katana3);
+	cartes.push_back(Katana4);
+
 	cartes.push_back(Shuriken);
+	cartes.push_back(Shuriken2);
+	cartes.push_back(Shuriken3);
+	cartes.push_back(Shuriken4);
+	
 	cartes.push_back(Kanabo);
+	cartes.push_back(Kanabo2);
+	cartes.push_back(Kanabo3);
+	cartes.push_back(Kanabo4);
+
 	cartes.push_back(Bokken);
+	cartes.push_back(Bokken2);
+	cartes.push_back(Bokken3);
+	cartes.push_back(Bokken4);
+
 	cartes.push_back(Kiseru);
+	cartes.push_back(Kiseru2);
+	cartes.push_back(Kiserru3);
+
+	
 	cartes.push_back(Wakizashi);
+
 
 	//vectore of CAction
 	CAction CrieDeGuerre("CrieDeGuerre", CRIEDEGUERRE, 10, 10, true, true, 10, 10, true);
@@ -190,7 +285,7 @@ std::vector<Carte> InitialisationDeck()
 	return cartes;
 }
 
-std::vector<Perso> initialisationPersonnage()
+vector<Perso> initialisationPersonnage()
 {
 	// make me a vectore of perso
 	Perso Hanzo("Hanz", HANZO, 100, 3);
@@ -207,7 +302,7 @@ std::vector<Perso> initialisationPersonnage()
 	Perso Kojiro("Kojiro", KOJIRO, 100, 3);
 
 	// add perso to vector
-	std::vector<Perso> personnages;
+	vector<Perso> personnages;
 	personnages.push_back(Hanzo);
 	personnages.push_back(Ushiwaka);
 	personnages.push_back(Chyome);
@@ -225,4 +320,70 @@ std::vector<Perso> initialisationPersonnage()
 	random_shuffle(personnages.begin(), personnages.end());
 
 	return personnages;
+}
+
+vector<Carte> deckPlayerSubset(vector<Carte>::iterator start, vector<Carte>::iterator end)
+{
+	vector<Carte> subset(start, end);
+	return subset;
+}
+
+void InitialisationDeckPlayer(std::vector<Carte>& deck, const std::string role, int id, Playeur& playeur)
+{
+    std::vector<Carte> deckJoueur;
+    if (role == "Shogun")
+    {
+        //si le joueur et shogune prend les 4 premier carte du deck est est les supprime
+        for (int i = 0; i < 4; i++)
+        {
+            deckJoueur.push_back(deck[i]);
+        }
+        deck.erase(deck.begin(), deck.begin() + 4);
+        playeur.setDeckPlayer(deckJoueur);
+    }
+
+    else
+    {
+        switch (id)
+        {
+        case 0:
+        case 1:
+        case 2:
+        {
+            //si le joueur et ninja prend les 5 premier carte du deck est est les supprime
+            for (int i = 0; i < 5; i++)
+            {
+                deckJoueur.push_back(deck[i]);
+            }
+            deck.erase(deck.begin(), deck.begin() + 5);
+            playeur.setDeckPlayer(deckJoueur);
+        }
+        break;
+        case 3:
+        case 4:
+        {
+            //si le joueur et samourai prend les 6 premier carte du deck est est les supprime
+            for (int i = 0; i < 6; i++)
+            {
+                deckJoueur.push_back(deck[i]);
+            }
+            deck.erase(deck.begin(), deck.begin() + 6);
+            playeur.setDeckPlayer(deckJoueur);
+        }
+        break;
+        case 5:
+        case 6:
+        {
+            for (int i = 0; i < 7; i++)
+            {
+                deckJoueur.push_back(deck[i]);
+            }
+            deck.erase(deck.begin(), deck.begin() + 7);
+            playeur.setDeckPlayer(deckJoueur);
+        }
+        break;
+        default:
+            break;
+        }
+    }
 }
