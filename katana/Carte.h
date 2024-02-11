@@ -5,6 +5,7 @@ class Carte
 {
 protected:
 	std::string name;
+	int id;
 
 public:
 	Carte(std::string name);

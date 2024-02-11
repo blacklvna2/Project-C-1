@@ -68,7 +68,7 @@ void InitialisationJoueur() {
     }
 
     // calcule de la distance entre les joueurs de facon circulaire
-    int c = distance(playeurs, 2, 0);
+    int c = distance(playeurs, 5, 1);
     cout << "La distance entre les joueurs 1 et 2 est : " << c << endl;
 
 

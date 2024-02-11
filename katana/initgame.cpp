@@ -131,34 +131,127 @@ vector<Carte> InitialisationDeck()
 	// add bonne valeur
 	vector<Carte> cartes;
 	CArme nodachie("Nodachi", NODACHI, 10, 1);
+	CArme nodachie2("Nodachi", NODACHI, 10, 1);
+	CArme nodachie3("Nodachi", NODACHI, 10, 1);
+	CArme nodachie4("Nodachi", NODACHI, 10, 1);
+	
 	CArme Naginata("Naginata", NAGINATA, 15, 1);
+	CArme Naginata2("Naginata", NAGINATA, 15, 1);
+	CArme Naginata3("Naginata", NAGINATA, 15, 1);
+	CArme Naginata4("Naginata", NAGINATA, 15, 1);
+
 	CArme Nagayari("Nagayari", NAGAYARI, 25, 1);
+	CArme Nagayari2("Nagayari", NAGAYARI, 25, 1);
+	CArme Nagayari3("Nagayari", NAGAYARI, 25, 1);
+	CArme Nagayari4("Nagayari", NAGAYARI, 25, 1);
+	
 	CArme Tanegashima("Tanegashima", TANEGASHIMA, 30, 1);
+	CArme Tanegashima2("Tanegashima", TANEGASHIMA, 30, 1);
+	CArme Tanegashima3("Tanegashima", TANEGASHIMA, 30, 1);
+
 	CArme Daikyu("Daikyu", DAIKYU, 35, 1);
+	CArme Daikyu2("Daikyu", DAIKYU, 35, 1);
+	CArme Daikyu3("Daikyu", DAIKYU, 35, 1);
+	
 	CArme Bo("Bo", BO, 40, 1);
+	CArme Bo2("Bo", BO, 40, 1);
+	CArme Bo3("Bo", BO, 40, 1);
+	CArme Bo4("Bo", BO, 40, 1);
+
 	CArme Kusarigama("Kusarigama", KUSARIGAMA, 20, 1);
+	CArme Kusarigama2("Kusarigama", KUSARIGAMA, 20, 1);
+	CArme Kusarigama3("Kusarigama", KUSARIGAMA, 20, 1);
+	CArme Kusaigama4("Kusarigama", KUSARIGAMA, 20, 1);
+
 	CArme Katana("Katana", KATANA, 10, 1);
+	CArme Katana2("Katana", KATANA, 10, 1);
+	CArme Katana3("Katana", KATANA, 10, 1);
+	CArme Katana4("Katana", KATANA, 10, 1);
+
+
 	CArme Shuriken("Shuriken", SHURIKEN, 5, 1);
+	CArme Shuriken2("Shuriken", SHURIKEN, 5, 1);
+	CArme Shuriken3("Shuriken", SHURIKEN, 5, 1);
+	CArme Shuriken4("Shuriken", SHURIKEN, 5, 1);
+
 	CArme Kanabo("Kanabo", KANABO, 45, 1);
+	CArme Kanabo2("Kanabo", KANABO, 45, 1);
+	CArme Kanabo3("Kanabo", KANABO, 45, 1);
+	CArme Kanabo4("Kanabo", KANABO, 45, 1);
+
 	CArme Bokken("Bokken", BOKKEN, 50, 1);
+	CArme Bokken2("Bokken", BOKKEN, 50, 1);
+	CArme Bokken3("Bokken", BOKKEN, 50, 1);
+	CArme Bokken4("Bokken", BOKKEN, 50, 1);
+	
 	CArme Kiseru("Kiseru", KISERU, 55, 1);
+	CArme Kiseru2("Kiseru", KISERU, 55, 1);
+	CArme Kiserru3("Kiseru", KISERU, 55, 1);
+
 	CArme Wakizashi("Wakizashi", WAKIZASHI, 60, 1);
 
 
 	// add arme to vector
 	cartes.push_back(nodachie);
+	cartes.push_back(nodachie2);
+	cartes.push_back(nodachie3);
+	cartes.push_back(nodachie4);
+	
 	cartes.push_back(Naginata);
+	cartes.push_back(Naginata2);
+	cartes.push_back(Naginata3);
+	cartes.push_back(Naginata4);
+
 	cartes.push_back(Nagayari);
+	cartes.push_back(Nagayari2);
+	cartes.push_back(Nagayari3);
+	cartes.push_back(Nagayari4);
+
 	cartes.push_back(Tanegashima);
+	cartes.push_back(Tanegashima2);
+	cartes.push_back(Tanegashima3);
+
 	cartes.push_back(Daikyu);
+	cartes.push_back(Daikyu2);
+	cartes.push_back(Daikyu3);
+
 	cartes.push_back(Bo);
+	cartes.push_back(Bo2);
+	cartes.push_back(Bo3);
+	cartes.push_back(Bo4);
+
 	cartes.push_back(Kusarigama);
+	cartes.push_back(Kusarigama2);
+	cartes.push_back(Kusarigama3);
+	cartes.push_back(Kusaigama4);
+
 	cartes.push_back(Katana);
+	cartes.push_back(Katana2);
+	cartes.push_back(Katana3);
+	cartes.push_back(Katana4);
+
 	cartes.push_back(Shuriken);
+	cartes.push_back(Shuriken2);
+	cartes.push_back(Shuriken3);
+	cartes.push_back(Shuriken4);
+	
 	cartes.push_back(Kanabo);
+	cartes.push_back(Kanabo2);
+	cartes.push_back(Kanabo3);
+	cartes.push_back(Kanabo4);
+
 	cartes.push_back(Bokken);
+	cartes.push_back(Bokken2);
+	cartes.push_back(Bokken3);
+	cartes.push_back(Bokken4);
+
 	cartes.push_back(Kiseru);
+	cartes.push_back(Kiseru2);
+	cartes.push_back(Kiserru3);
+
+	
 	cartes.push_back(Wakizashi);
+
 
 	//vectore of CAction
 	CAction CrieDeGuerre("CrieDeGuerre", CRIEDEGUERRE, 10, 10, true, true, 10, 10, true);
@@ -248,6 +341,7 @@ void InitialisationDeckPlayer(std::vector<Carte>& deck, const std::string role, 
         deck.erase(deck.begin(), deck.begin() + 4);
         playeur.setDeckPlayer(deckJoueur);
     }
+
     else
     {
         switch (id)

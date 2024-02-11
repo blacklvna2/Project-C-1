@@ -6,7 +6,10 @@
 
 using namespace std;
 
-
+struct Player {
+	int position;
+	// Autres attributs du joueur
+};
 
 int distance(std::vector<Playeur> playeurs, int a, int b)
 {
