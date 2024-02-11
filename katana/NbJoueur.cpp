@@ -10,6 +10,7 @@
 #include "initgame.h"
 #include "Carte.h"
 #include "Jeu.h"
+#include "distancePlayeur.h"
 
 using namespace std;
 
@@ -65,6 +66,14 @@ void InitialisationJoueur() {
         }
         cout << endl;
     }
+
+    // calcule de la distance entre les joueurs de facon circulaire
+    int c = distance(playeurs, 2, 0);
+    cout << "La distance entre les joueurs 1 et 2 est : " << c << endl;
+
+
+
+
 }
 
 

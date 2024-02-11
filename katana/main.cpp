@@ -18,6 +18,7 @@
 #include "CPerma.h"
 #include "Carte.h"
 #include "initgame.h"
+#include "distancePlayeur.h"
 
 
 using namespace std;
@@ -28,13 +29,6 @@ int main()
     Titre();
     Menu();
     Victoire();
-
-
-
-    
-
-
-
 
     return 0;
 }
