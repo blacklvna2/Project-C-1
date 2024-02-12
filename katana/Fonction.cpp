@@ -2,9 +2,7 @@
 #include <string>
 #include <regex>
 #include <windows.h>
-#include "Menu.h"
 #include "fonction.h"
-#include "NbJoueur.h"
 #include "playeur.h"
 #include "perso.h"
 #include "role.h"
@@ -175,9 +173,11 @@ void InitialisationJoueur() {
             cout << deckplayeur[j].getName() << " ";
         }
         cout << endl;
-    }
-    attententRepPlayer(playeurs);
 
+        while (true) {
+            attententRepPlayer(playeurs, game);
+        }
+    }
     // calcule de la distance entre les joueurs de facon circulaire
     //int c = distance(playeurs, 1, 5);
     //cout << "La distance entre les joueurs 1 et 2 est : " << c << endl;
