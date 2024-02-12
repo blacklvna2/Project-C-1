@@ -4,7 +4,7 @@
 #include <vector>
 #include "Carte.h"
 #include "Jeu.h"
-
+#include "Fonction.h"
 
 using namespace std;
 
@@ -31,9 +31,9 @@ void attententRepPlayer(std::vector<Playeur> playeurs, Jeu game)
             l++;
         }
         int piocher = static_cast<int>(deckplayeur.size()) + 1; // Use static_cast to convert size_t to int
-        cout << "pour piocher une carte entrer " << piocher << endl;
+        cout << "pour piocher une carte entrez " << piocher << endl;
 
-        cin >> rep;
+        rep << EntreNombre();
 
         // si le joueur a jouer une carte
         if (rep >= 1 && rep <= static_cast<int>(deckplayeur.size())) // Use static_cast to convert size_t to int
