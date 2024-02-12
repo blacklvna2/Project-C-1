@@ -128,15 +128,16 @@ void Victoire()
 int nbPlayers() {
     int numPlayers;
     cout << "Entrez le nombre de joueurs (de 3 à 7) : ";
-    numPlayers = EntreNombre();
+    cin >> numPlayers;
     while (numPlayers < 3 || numPlayers > 7) {
         cout << "Le nombre de joueurs doit être compris entre 3 et 7. Entrez à nouveau le nombre de joueurs : ";
-        numPlayers = EntreNombre();
+        cin >> numPlayers;
     }
     return numPlayers;
 }
 
 void InitialisationJoueur() {
+
     int numPlayers = nbPlayers();
     vector<Perso> personnages = initialisationPersonnage();
     vector<Carte> deck = InitialisationDeck();
@@ -166,12 +167,19 @@ void InitialisationJoueur() {
         vector<Carte> deckplayeur = playeurs[i].getDeckPlayer();
         cout << "L'id du joueur " << i + 1 << " est : " << playeurs[i].getId() << endl;
 
-        cout << "Joueur " << i + 1 << ": " << playeurs[i].getName() << " a le rôle de " << role.getRoleName() << " et le personnage " << perso.getName() << endl;;
+        cout << "Joueur " << i + 1 << ": " << playeurs[i].getName() << " a le rôle de " << role.getRoleName() << " et le personnage " << perso.getName() << endl;
 
-        while (true) {
-            attententRepPlayer(playeurs, game);
+        cout << "Deck du joueur " << i + 1 << ": ";
+        for (size_t j = 0; j < deckplayeur.size(); ++j) {
+            cout << deckplayeur[j].getName() << " ";
         }
+        cout << endl;
     }
+    
+    
+    attententRepPlayer(playeurs, deck, game);
+    
+
     // calcule de la distance entre les joueurs de facon circulaire
     //int c = distance(playeurs, 1, 5);
     //cout << "La distance entre les joueurs 1 et 2 est : " << c << endl;
