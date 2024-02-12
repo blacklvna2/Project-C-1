@@ -67,12 +67,12 @@ void InitialisationJoueur() {
         }
         cout << endl;
     }
+        attententRepPlayer(playeurs, deck, playeurs, game);
 
     // calcule de la distance entre les joueurs de facon circulaire
     //int c = distance(playeurs, 1, 5);
     //cout << "La distance entre les joueurs 1 et 2 est : " << c << endl;
 
-    attententRepPlayer(playeurs);
 
 
 

@@ -8,7 +8,7 @@
 
 using namespace std;
 
-void attententRepPlayer(std::vector<Playeur> playeurs)
+void attententRepPlayer(std::vector<Playeur> playeurs, std::vector<Carte> deck, Playeur playeur, Jeu game)
 {
 	int rep;
 	int i = 0;
@@ -59,10 +59,11 @@ void attententRepPlayer(std::vector<Playeur> playeurs)
 		}
 		else
 		{
+			//piocherCarte(deck, playeurs[i], game);
 			cout << "Invalid input. Please enter a number between 1 and " << deckplayeur.size() << endl;
 		}
 	}
-	attententRepPlayer(playeurs);
+	attententRepPlayer(playeurs, deck, playeur, game);
 }
 
 void piocherCarte(std::vector<Carte> deck, Playeur playeur, Jeu game)
