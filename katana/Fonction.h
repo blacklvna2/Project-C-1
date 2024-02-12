@@ -6,7 +6,6 @@
 #include <string>
 #include <windows.h>
 #include "initgame.h"
-#include "fonction.h"
 #include "Jeu.h"
 #include "Playeur.h"
 
