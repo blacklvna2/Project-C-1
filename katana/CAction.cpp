@@ -4,9 +4,9 @@
 
 using namespace std;
 
-CAction::CAction(string name, ActionType type,int degat, int horreurPoint, bool permanent, bool Playerviser, int pointdevie, int nombredecartepiocher, bool hasard) : Carte(name) {
+CAction::CAction(string name, ActionType type,int degat, int honneurPoint, bool permanent, bool Playerviser, int pointdevie, int nombredecartepiocher, bool hasard) : Carte(name) {
 	this->degat = degat;
-	this->horreurPoint = horreurPoint;
+	this->honneurPoint = honneurPoint;
 	this->permanent = permanent;
 	this->Playerviser = Playerviser;
 	this->pointdevie = pointdevie;
@@ -18,8 +18,8 @@ int CAction::getDegat() {
 	return degat;
 }
 
-int CAction::getHorreurPoint() {
-	return horreurPoint;
+int CAction::gethonneurPoint() {
+	return honneurPoint;
 }
 
 bool CAction::getPermanent() {
@@ -50,8 +50,8 @@ void CAction::setDegat(int degat) {
 	this->degat = degat;
 }
 
-void CAction::setHorreurPoint(int horreurPoint) {
-	this->horreurPoint = horreurPoint;
+void CAction::sethonneurPoint(int honneurPoint) {
+	this->honneurPoint = honneurPoint;
 }
 
 void CAction::setPermanent(bool permanent) {

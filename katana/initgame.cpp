@@ -227,17 +227,57 @@ vector<Carte> InitialisationDeck()
 
 	//vectore of CAction
 	CAction CrieDeGuerre("CrieDeGuerre", CRIEDEGUERRE, 10, 10, true, true, 10, 10, true);
+	CAction CrieDeGuerre2("CrieDeGuerre", CRIEDEGUERRE, 10, 10, true, true, 10, 10, true);
+	CAction CrieDeGuerre3("CrieDeGuerre", CRIEDEGUERRE, 10, 10, true, true, 10, 10, true);
+	CAction CrieDeGuerre4("CrieDeGuerre", CRIEDEGUERRE, 10, 10, true, true, 10, 10, true);
+
 	CAction Daimyo("Daimyo", DAIMYO, 10, 10, true, true, 10, 10, true);
+	CAction Daimyo2("Daimyo", DAIMYO, 10, 10, true, true, 10, 10, true);
+	CAction Daimyo3("Daimyo", DAIMYO, 10, 10, true, true, 10, 10, true);
+
 	CAction Diversion("Diversion", DIVERSION, 10, 10, true, true, 10, 10, true);
+	CAction Diversion2("Diversion", DIVERSION, 10, 10, true, true, 10, 10, true);
+	CAction Diversion3("Diversion", DIVERSION, 10, 10, true, true, 10, 10, true);
+	CAction Diversion4("Diversion", DIVERSION, 10, 10, true, true, 10, 10, true);
+	CAction Diversion5("Diversion", DIVERSION, 10, 10, true, true, 10, 10, true);
+
 	CAction Geisha("Geisha", GEISHA, 10, 10, true, true, 10, 10, true);
+	CAction Geisha2("Geisha", GEISHA, 10, 10, true, true, 10, 10, true);
+	CAction Geisha3("Geisha", GEISHA, 10, 10, true, true, 10, 10, true);
+	CAction Geisha4("Geisha", GEISHA, 10, 10, true, true, 10, 10, true);
+	CAction Geisha5("Geisha", GEISHA, 10, 10, true, true, 10, 10, true);
+	CAction Geisha6("Geisha", GEISHA, 10, 10, true, true, 10, 10, true);
+
 	CAction Meditation("Meditation", MEDITATION, 10, 10, true, true, 10, 10, true);
+	CAction Meditation2("Meditation", MEDITATION, 10, 10, true, true, 10, 10, true);//stat a modifier
+	CAction Meditation3("Meditation", MEDITATION, 10, 10, true, true, 10, 10, true);
 
 	// add carte to vector carte
 	cartes.push_back(CrieDeGuerre);
+	cartes.push_back(CrieDeGuerre2);
+	cartes.push_back(CrieDeGuerre3);
+	cartes.push_back(CrieDeGuerre4);
+
 	cartes.push_back(Daimyo);
+	cartes.push_back(Daimyo2);
+	cartes.push_back(Daimyo3);
+
 	cartes.push_back(Diversion);
+	cartes.push_back(Diversion2);
+	cartes.push_back(Diversion3);
+	cartes.push_back(Diversion4);
+	cartes.push_back(Diversion5);
+
 	cartes.push_back(Geisha);
+	cartes.push_back(Geisha2);
+	cartes.push_back(Geisha3);
+	cartes.push_back(Geisha4);
+	cartes.push_back(Geisha5);
+	cartes.push_back(Geisha6);
+
 	cartes.push_back(Meditation);
+	cartes.push_back(Meditation2);
+	cartes.push_back(Meditation3);
 
 	//vectore of CPerma
 	CPerma Armure("Armure", ARMURE, 0, 10, 0, 0, false);
