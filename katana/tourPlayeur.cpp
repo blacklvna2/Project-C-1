@@ -8,7 +8,7 @@
 
 using namespace std;
 
-void attententRepPlayer(std::vector<Playeur> playeurs, Jeu game)
+void attententRepPlayer(vector<Playeur> playeurs, Jeu game)
 {
     int rep;
     int i = 0;
@@ -35,9 +35,14 @@ void attententRepPlayer(std::vector<Playeur> playeurs, Jeu game)
 
         cin >> rep;
 
+
+
         // si le joueur a jouer une carte
         if (rep >= 1 && rep <= static_cast<int>(deckplayeur.size())) // Use static_cast to convert size_t to int
         {
+            if (rep == 1) {
+                rep -= 1;
+            }
             cout << "le joueur " << playeurs[i].getName() << " a jouer la carte " << deckplayeur[rep].getName() << endl;
             // jouer la carte
 
@@ -63,6 +68,7 @@ void attententRepPlayer(std::vector<Playeur> playeurs, Jeu game)
         i++;
     }
 }
+
 void piocherCarte(std::vector<Carte> deck, Playeur playeur, Jeu game)
 {
 	// piocher une carte
@@ -75,6 +81,3 @@ void piocherCarte(std::vector<Carte> deck, Playeur playeur, Jeu game)
 	// mettre a jour le deck du jeu
 	game.setdeck(deck);
 }
-
-
-
