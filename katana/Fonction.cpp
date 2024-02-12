@@ -2,9 +2,7 @@
 #include <string>
 #include <regex>
 #include <windows.h>
-#include "Menu.h"
-#include "fonction.h"
-#include "NbJoueur.h"
+#include "Fonction.h"
 #include "playeur.h"
 #include "perso.h"
 #include "role.h"
@@ -69,8 +67,8 @@ int Menu()
         SetConsoleOutputCP(1252);
         cout << "Vous avez choisi de jouer au jeu" << endl;
         InitialisationJoueur();
+        break;
     }
-    break;
     case 2:
     {
         SetConsoleOutputCP(1252);
@@ -130,7 +128,7 @@ void Victoire()
 int nbPlayers() {
     int numPlayers;
     cout << "Entrez le nombre de joueurs (de 3 à 7) : ";
-    cin >> numPlayers;
+    numPlayers = EntreNombre();
     while (numPlayers < 3 || numPlayers > 7) {
         cout << "Le nombre de joueurs doit être compris entre 3 et 7. Entrez à nouveau le nombre de joueurs : ";
         cin >> numPlayers;
