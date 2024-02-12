@@ -4,10 +4,7 @@
 #include <windows.h>
 #include <algorithm>
 #include <random>
-#include "Menu.h"
 #include "fonction.h"
-#include "NbJoueur.h"
-#include "Victoire.h"
 #include "role.h"
 #include "Playeur.h"
 #include "perso.h"
@@ -26,11 +23,10 @@ using namespace std;
 int main()
 {
 
-    /*Titre();
+    Titre();
     Menu();
-    Victoire();*/
-    Carte carte("test");
-    cout << carte.getName() << endl;
+    Victoire();
+
 
     return 0;
 }

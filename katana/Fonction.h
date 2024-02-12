@@ -1,5 +1,21 @@
 #pragma once
+#include <iostream>
+#include <vector>
+#include <algorithm>
+#include <random>
 #include <string>
-using namespace std;
-string Entre();
+#include <windows.h>
+#include "initgame.h"
+#include "Menu.h"
+#include "fonction.h"
+#include "NbJoueur.h"
+#include "Jeu.h"
+#include "Playeur.h"
+
+std::string Entre();
 int EntreNombre();
+int Menu();
+void Titre();
+void Victoire();
+int nbPlayers();
+void InitialisationJoueur();

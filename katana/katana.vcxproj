@@ -138,13 +138,10 @@
     <ClCompile Include="initgame.cpp" />
     <ClCompile Include="jeu.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="Menu.cpp" />
-    <ClCompile Include="NbJoueur.cpp" />
     <ClCompile Include="perso.cpp" />
     <ClCompile Include="playeur.cpp" />
     <ClCompile Include="role.cpp" />
     <ClCompile Include="tourPlayeur.cpp" />
-    <ClCompile Include="Victoire.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CAction.h" />
@@ -155,14 +152,11 @@
     <ClInclude Include="Fonction.h" />
     <ClInclude Include="initgame.h" />
     <ClInclude Include="jeu.h" />
-    <ClInclude Include="Menu.h" />
-    <ClInclude Include="NbJoueur.h" />
     <ClInclude Include="perso.h" />
     <ClInclude Include="playeur.h" />
     <ClInclude Include="resource.h" />
     <ClInclude Include="role.h" />
     <ClInclude Include="tourPlayeur.h" />
-    <ClInclude Include="Victoire.h" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="katana.rc" />

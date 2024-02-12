@@ -11,7 +11,6 @@ enum ActionType {
 	CEREMONIEDUTHE,
 	PARADE,
 	JUJITSU,
-	JUJITSU,
 };
 
 class CAction : public Carte

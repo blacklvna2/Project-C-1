@@ -6,5 +6,5 @@
 
 // parcour la liste et attand un reponce d'un joueur avans de continuer
 
-void attententRepPlayer(std::vector<Playeur> playeurs, std::vector<Carte> deck, Playeur playeur, Jeu game); // paramatre: vector des joueurs
+void attententRepPlayer(std::vector<Playeur> playeurs); // paramatre: vector des joueurs
 void piocherCarte(std::vector<Carte> deck, Playeur playeur, Jeu game); // paramatre: vector des joueurs, playeur ,le 
