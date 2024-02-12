@@ -5,7 +5,10 @@
 #include "Carte.h"
 #include "Jeu.h"
 #include "Fonction.h"
+<<<<<<< HEAD
 
+=======
+>>>>>>> eeb927d490ddfcb6920c5bf143e0c6ae9e68f582
 
 using namespace std;
 
@@ -28,10 +31,19 @@ void attententRepPlayer(vector<Playeur> playeurs, Jeu game)
             l++;
         }
         int piocher = static_cast<int>(deckplayeur.size()) + 1; // Use static_cast to convert size_t to int
+<<<<<<< HEAD
         cout << "pour piocher une carte entrer " << piocher << endl;
         
         int rep = EntreNombre();
         if (rep ==  piocher) 
+=======
+        cout << "pour piocher une carte entrez " << piocher << endl;
+
+        rep << EntreNombre();
+
+        // si le joueur a jouer une carte
+        if (rep >= 1 && rep <= static_cast<int>(deckplayeur.size())) // Use static_cast to convert size_t to int
+>>>>>>> eeb927d490ddfcb6920c5bf143e0c6ae9e68f582
         {
             piocherCarte(game.getdeck(), playeurs[i], game);
             cout << "Le joueur " << playeurs[i].getName() << " a piocher une carte" << endl;
