@@ -131,7 +131,7 @@ int nbPlayers() {
     numPlayers = EntreNombre();
     while (numPlayers < 3 || numPlayers > 7) {
         cout << "Le nombre de joueurs doit être compris entre 3 et 7. Entrez à nouveau le nombre de joueurs : ";
-        cin >> numPlayers;
+        numPlayers = EntreNombre();
     }
     return numPlayers;
 }
