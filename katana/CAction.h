@@ -7,7 +7,11 @@ enum ActionType {
 	DAIMYO,
 	DIVERSION,
 	GEISHA,
-	MEDITATION
+	MEDITATION,
+	CEREMONIEDUTHE,
+	PARADE,
+	JUJITSU,
+	JUJITSU,
 };
 
 class CAction : public Carte

@@ -252,6 +252,31 @@ vector<Carte> InitialisationDeck()
 	CAction Meditation2("Meditation", MEDITATION, 10, 10, true, true, 10, 10, true);//stat a modifier
 	CAction Meditation3("Meditation", MEDITATION, 10, 10, true, true, 10, 10, true);
 
+	CAction CeremonieDuThe("CeremonieDuThe", CEREMONIEDUTHE, 10, 10, true, true, 10, 10, true);
+	CAction CeremonieDuThe2("CeremonieDuThe", CEREMONIEDUTHE, 10, 10, true, true, 10, 10, true);
+	CAction CeremonieDuThe3("CeremonieDuThe", CEREMONIEDUTHE, 10, 10, true, true, 10, 10, true);
+	CAction CeremonieDuThe4("CeremonieDuThe", CEREMONIEDUTHE, 10, 10, true, true, 10, 10, true);
+
+	CAction Parade("Parade", PARADE, 10, 10, true, true, 10, 10, true);
+	CAction Parade2("Parade", PARADE, 10, 10, true, true, 10, 10, true);
+	CAction Parade3("Parade", PARADE, 10, 10, true, true, 10, 10, true);
+	CAction Parade4("Parade", PARADE, 10, 10, true, true, 10, 10, true);
+	CAction Parade5("Parade", PARADE, 10, 10, true, true, 10, 10, true);
+	CAction Parade6("Parade", PARADE, 10, 10, true, true, 10, 10, true);
+	CAction Parade7("Parade", PARADE, 10, 10, true, true, 10, 10, true);
+	CAction Parade8("Parade", PARADE, 10, 10, true, true, 10, 10, true);
+	CAction Parade9("Parade", PARADE, 10, 10, true, true, 10, 10, true);
+	CAction Parade10("Parade", PARADE, 10, 10, true, true, 10, 10, true);
+	CAction Parade11("Parade", PARADE, 10, 10, true, true, 10, 10, true);
+	CAction Parade12("Parade", PARADE, 10, 10, true, true, 10, 10, true);
+	CAction Parade13("Parade", PARADE, 10, 10, true, true, 10, 10, true);
+	CAction Parade14("Parade", PARADE, 10, 10, true, true, 10, 10, true);
+	CAction Parade15("Parade", PARADE, 10, 10, true, true, 10, 10, true);
+
+	CAction Jujitsu("Jujitsu", JUJITSU, 10, 10, true, true, 10, 10, true);
+	CAction Jujitsu2("Jujitsu", JUJITSU, 10, 10, true, true, 10, 10, true);
+	CAction Jujitsu3("Jujitsu", JUJITSU, 10, 10, true, true, 10, 10, true);
+
 	// add carte to vector carte
 	cartes.push_back(CrieDeGuerre);
 	cartes.push_back(CrieDeGuerre2);
@@ -279,17 +304,70 @@ vector<Carte> InitialisationDeck()
 	cartes.push_back(Meditation2);
 	cartes.push_back(Meditation3);
 
+	cartes.push_back(CeremonieDuThe);
+	cartes.push_back(CeremonieDuThe2);
+	cartes.push_back(CeremonieDuThe3);
+	cartes.push_back(CeremonieDuThe4);
+
+	cartes.push_back(Parade);
+	cartes.push_back(Parade2);
+	cartes.push_back(Parade3);
+	cartes.push_back(Parade4);
+	cartes.push_back(Parade5);
+	cartes.push_back(Parade6);
+	cartes.push_back(Parade7);
+	cartes.push_back(Parade8);
+	cartes.push_back(Parade9);
+	cartes.push_back(Parade10);
+	cartes.push_back(Parade11);
+	cartes.push_back(Parade12);
+	cartes.push_back(Parade13);
+	cartes.push_back(Parade14);
+	cartes.push_back(Parade15);
+
+	cartes.push_back(Jujitsu);
+	cartes.push_back(Jujitsu2);
+	cartes.push_back(Jujitsu3);
+
 	//vectore of CPerma
 	CPerma Armure("Armure", ARMURE, 0, 10, 0, 0, false);
+	CPerma Armure2("Armure", ARMURE, 0, 10, 0, 0, false);
+	CPerma Armure3("Armure", ARMURE, 0, 10, 0, 0, false);
+	CPerma Armure4("Armure", ARMURE, 0, 10, 0, 0, false);
+
 	CPerma CodeDuBushido("CodeDuBushido", CODEDUBUSHIDO, 0, 0, 0, 1, true);
+	CPerma CodeDuBushido2("CodeDuBushido", CODEDUBUSHIDO, 0, 0, 0, 1, true);
+
 	CPerma AttaqueRapide("AttaqueRapide", ATTAQUERAPIDE, 10, 0, 0, 0, false);
-	CPerma Consentration("Consentration", CONSENTRATION, 0, 0, 10, 0, false);
+	CPerma AttaqueRapide2("AttaqueRapide", ATTAQUERAPIDE, 10, 0, 0, 0, false);
+	CPerma AttaqueRapide3("AttaqueRapide", ATTAQUERAPIDE, 10, 0, 0, 0, false);
+
+	CPerma Concentration("Concentration", CONCENTRATION, 0, 0, 10, 0, false);
+	CPerma Concentration2("Concentration", CONCENTRATION, 0, 0, 10, 0, false);
+	CPerma Concentration3("Concentration", CONCENTRATION, 0, 0, 10, 0, false);
+	CPerma Concentration4("Concentration", CONCENTRATION, 0, 0, 10, 0, false);
+	CPerma Concentration5("Concentration", CONCENTRATION, 0, 0, 10, 0, false);
+	CPerma Concentration6("Concentration", CONCENTRATION, 0, 0, 10, 0, false);
 
 	// add carte to vector carte
 	cartes.push_back(Armure);
+	cartes.push_back(Armure2);
+	cartes.push_back(Armure3);
+	cartes.push_back(Armure4);
+
 	cartes.push_back(CodeDuBushido);
+	cartes.push_back(CodeDuBushido2);
+
 	cartes.push_back(AttaqueRapide);
-	cartes.push_back(Consentration);
+	cartes.push_back(AttaqueRapide2);
+	cartes.push_back(AttaqueRapide3);
+
+	cartes.push_back(Concentration);
+	cartes.push_back(Concentration2);
+	cartes.push_back(Concentration3);
+	cartes.push_back(Concentration4);
+	cartes.push_back(Concentration5);
+	cartes.push_back(Concentration6);
 
 	// shuffle vector
 	random_shuffle(cartes.begin(), cartes.end());
@@ -300,18 +378,18 @@ vector<Carte> InitialisationDeck()
 vector<Perso> initialisationPersonnage()
 {
 	// make me a vectore of perso
-	Perso Hanzo("Hanz", HANZO, 100, 3);
-	Perso Ushiwaka("Ushiwaka", USHIWAKA, 100, 3);
-	Perso Chyome("Chyome", CHYOME, 100, 3);
-	Perso Hideyoshi("Hideyoshi", HIDEYOSHI, 100, 3);
-	Perso Ginchyo("Ginchyo", GINCHIYO, 100, 3);
-	Perso Goemon("Goemon", GOEMON, 100, 3);
-	Perso Nobunaga("Nobunaga", NOBUNAGA, 100, 3);
-	Perso Tomoe("Tomoe", TOMOE, 100, 3);
-	Perso Ieyasu("Ieyasu", IEYASU, 100, 3);
-	Perso Benkei("Benkei", BENKEI, 100, 3);
-	Perso Musashi("Musashi", MUSASHI, 100, 3);
-	Perso Kojiro("Kojiro", KOJIRO, 100, 3);
+	Perso Hanzo("Hanz", HANZO, 4, 3);
+	Perso Ushiwaka("Ushiwaka", USHIWAKA, 4, 3);
+	Perso Chyome("Chyome", CHYOME, 4, 3);
+	Perso Hideyoshi("Hideyoshi", HIDEYOSHI, 4, 3);
+	Perso Ginchyo("Ginchyo", GINCHIYO, 4, 3);
+	Perso Goemon("Goemon", GOEMON, 5, 3);
+	Perso Nobunaga("Nobunaga", NOBUNAGA, 5, 3);
+	Perso Tomoe("Tomoe", TOMOE, 5, 3);
+	Perso Ieyasu("Ieyasu", IEYASU, 5, 3);
+	Perso Benkei("Benkei", BENKEI, 5, 3);
+	Perso Musashi("Musashi", MUSASHI, 5, 3);
+	Perso Kojiro("Kojiro", KOJIRO, 5, 3);
 
 	// add perso to vector
 	vector<Perso> personnages;

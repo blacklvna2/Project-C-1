@@ -7,7 +7,7 @@ enum PermanentType {
     ARMURE,
     CODEDUBUSHIDO,
     ATTAQUERAPIDE,
-    CONSENTRATION
+    CONCENTRATION
 };
 
 class CPerma : public Carte
