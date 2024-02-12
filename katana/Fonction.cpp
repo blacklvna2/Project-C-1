@@ -166,13 +166,7 @@ void InitialisationJoueur() {
         vector<Carte> deckplayeur = playeurs[i].getDeckPlayer();
         cout << "L'id du joueur " << i + 1 << " est : " << playeurs[i].getId() << endl;
 
-        cout << "Joueur " << i + 1 << ": " << playeurs[i].getName() << " a le rôle de " << role.getRoleName() << " et le personnage " << perso.getName() << endl;
-
-        cout << "Deck du joueur " << i + 1 << ": ";
-        for (size_t j = 0; j < deckplayeur.size(); ++j) {
-            cout << deckplayeur[j].getName() << " ";
-        }
-        cout << endl;
+        cout << "Joueur " << i + 1 << ": " << playeurs[i].getName() << " a le rôle de " << role.getRoleName() << " et le personnage " << perso.getName() << endl;;
 
         while (true) {
             attententRepPlayer(playeurs, game);
