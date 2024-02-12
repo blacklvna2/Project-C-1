@@ -9,6 +9,8 @@ using namespace std;
 
 vector<Role> InitialisationRole(int nbjoueur)
 {
+	vector<int> tableauEtoile{ 1,2,3 };
+	random_shuffle(tableauEtoile.begin(), tableauEtoile.end());
 	switch (nbjoueur)
 	{
 	case 3:
@@ -16,8 +18,8 @@ vector<Role> InitialisationRole(int nbjoueur)
 		//todo liste shuffule 1 a 3 for ninja 
 		// make me a vectore of role
 		Role SHOGUN("Shogun", RoleType::SHOGUN, 6, 1, 100);
-		Role Ninja1("Ninja", NINJA, 3, 3, 3);
-		Role Ninja2("Ninja", NINJA, 3, 3, 3);// fonction random qui genere 1,2,3 pour les etoiles
+		Role Ninja1("Ninja", NINJA, 3, 3, tableauEtoile[0]);
+		Role Ninja2("Ninja", NINJA, 3, 3, tableauEtoile[1]);// fonction random qui genere 1,2,3 pour les etoiles
 		// add role to vector
 		vector<Role> roles;
 		roles.push_back(SHOGUN);
@@ -36,8 +38,8 @@ vector<Role> InitialisationRole(int nbjoueur)
 	{
 		// make me a vectore of role
 		Role SHOGUN("Shogun", RoleType::SHOGUN, 5, 1, 100);
-		Role Ninja1("Ninja", NINJA, 3, 3, 3);
-		Role Ninja2("Ninja", NINJA, 3, 3, 3);
+		Role Ninja1("Ninja", NINJA, 3, 3, tableauEtoile[0]);
+		Role Ninja2("Ninja", NINJA, 3, 3, tableauEtoile[1]);
 		Role Samourai("Samourai", SAMOURAI, 3, 1, 100);
 
 		// add role to vector
@@ -56,8 +58,8 @@ vector<Role> InitialisationRole(int nbjoueur)
 	case 5:
 	{// make me a vectore of role
 		Role SHOGUN("Shogun", RoleType::SHOGUN, 5, 1, 100);
-		Role Ninja1("Ninja", NINJA, 3, 3, 3);
-		Role Ninja2("Ninja", NINJA, 3, 3, 3);
+		Role Ninja1("Ninja", NINJA, 3, 3, tableauEtoile[0]);
+		Role Ninja2("Ninja", NINJA, 3, 3, tableauEtoile[1]);
 		Role Samourai("Samourai", SAMOURAI, 3, 1, 100);
 		Role Ronin("Ronin", RONIN, 3, 2, 100);
 
@@ -77,9 +79,9 @@ vector<Role> InitialisationRole(int nbjoueur)
 	{
 		// make me a vectore of role
 		Role SHOGUN("Shogun", RoleType::SHOGUN, 5, 1, 100);
-		Role Ninja1("Ninja", NINJA, 4, 3, 3);
-		Role Ninja2("Ninja", NINJA, 4, 3, 3);
-		Role Ninja3("Ninja", NINJA, 4, 3, 3);
+		Role Ninja1("Ninja", NINJA, 4, 3, tableauEtoile[0]);
+		Role Ninja2("Ninja", NINJA, 4, 3, tableauEtoile[1]);
+		Role Ninja3("Ninja", NINJA, 4, 3, tableauEtoile[2]);
 		Role Samourai("Samourai", SAMOURAI, 4, 1, 100);
 		Role Ronin("Ronin", RONIN, 4, 2, 100);
 
@@ -101,9 +103,9 @@ vector<Role> InitialisationRole(int nbjoueur)
 	{
 		// make me a vectore of role
 		Role SHOGUN("Shogun", RoleType::SHOGUN, 5, 1, 100);
-		Role Ninja1("Ninja", NINJA, 4, 3, 3);
-		Role Ninja2("Ninja", NINJA, 4, 3, 3);
-		Role Ninja3("Ninja", NINJA, 4, 3, 3);
+		Role Ninja1("Ninja", NINJA, 4, 3, tableauEtoile[0]);
+		Role Ninja2("Ninja", NINJA, 4, 3, tableauEtoile[1]);
+		Role Ninja3("Ninja", NINJA, 4, 3, tableauEtoile[2]);
 		Role Samourai("Samourai", SAMOURAI, 4, 1, 100);
 		Role Samourai2("Samourai", SAMOURAI, 4, 1, 100);
 		Role Ronin("Ronin", RONIN, 4, 2, 100);
