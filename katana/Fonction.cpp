@@ -67,29 +67,29 @@ int Menu()
         SetConsoleOutputCP(1252);
         cout << "Vous avez choisi de jouer au jeu" << endl;
         InitialisationJoueur();
+        break;
     }
-    break;
     case 2:
     {
         SetConsoleOutputCP(1252);
         cout << "Vous avez choisi de lire les règles" << endl;
         system("start http://jeuxstrategie1.free.fr/jeu_katana/regle.pdf");
         Menu();
+        break;
     }
-    break;
     case 3:
     {
         SetConsoleOutputCP(1252);
         cout << "Vous avez choisi de quitter le jeu" << endl;
+        break;
     }
-    break;
     default:
     {
         SetConsoleOutputCP(1252);
         cout << "Vous n'avez pas choisi une option valide" << endl;
         Menu();
+        break;
     }
-    break;
     }
 
     return 0;
