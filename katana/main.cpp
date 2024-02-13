@@ -16,7 +16,7 @@
 #include "Carte.h"
 #include "initgame.h"
 #include "distancePlayeur.h"
-
+#include <cstdlib>
 
 using namespace std;
 

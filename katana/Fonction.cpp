@@ -11,6 +11,7 @@
 #include "Jeu.h"
 #include "distancePlayeur.h"
 #include "tourPlayeur.h"
+#include <cstdlib>
 
 using namespace std;
 
@@ -246,13 +247,15 @@ void InitialisationJoueur() {
         // Si le joueur a le rôle de Shogun, le mettre en première position
         if (role.getRoleName() == "Shogun" && i != 0) { // Vérifier si le joueur n'est pas déjà en première position
             std::swap(playeurs[0], playeurs[i]);
-            cout << "Le joueur " << playeurs[0].getName() << " a le rôle de Shogun et est en première position." << endl;
+            cout << "Le joueur " << playeurs[0].getName() << " a le rôle de Shogun " << endl;
             // Inverser les ID du Shogun et du premier joueur
             int tempId = playeurs[0].getId();
             playeurs[0].setId(playeurs[i].getId());
             playeurs[i].setId(tempId);
+            
         }
-
+        // afficher les personnages de tous les joueurs
+       // cout << "Joueur " << i + 1 << ": " << playeurs[i].getName() << " a le personnage " << perso.getName() << endl;
 
     }
 
