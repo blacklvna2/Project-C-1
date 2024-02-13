@@ -187,21 +187,25 @@ void attententRepPlayer(std::vector<Playeur>& playeurs, std::vector<Carte>& deck
 
             rep = EntreNombre();
 
-            if (rep == deckplayeur.size() + 1 || deckplayeur.empty())
-            {
-                vector<Carte> newDeck = piocherCarte(deck, playeurs[i], game);
-                //aficher la carte piocher depuit le deck du joueur
-
-                cout << "Le joueur " << playeurs[i].getName() << " a pioché la carte " << newDeck.back().getName() << endl;
-                playeurs[i].setDeckPlayer(newDeck);
-                i++;
-            }
-            // si le joueur a joué une carte
-            else if (rep >= 1 && rep <= deckplayeur.size())
-            {
-                // afficher la carte jouée
-                cout << "le joueur " << playeurs[i].getName() << " a joué la carte " << deckplayeur[rep - 1].getName() << endl;
-                // jouer la carte
+			if (rep == deckplayeur.size() + 1 || deckplayeur.empty())
+			{
+				vector<Carte> deckplayeur = piocherCarte(deck, playeurs[i], game);
+				//aficher la carte piocher depuit le deck du joueur
+				playeurs[i].setDeckPlayer(deckplayeur);
+				int x = deckplayeur.size();
+				cout << "Le joueur " << playeurs[i].getName() << " a piocher la carte " << deckplayeur[x-1].getName() << endl;
+				i++;
+			}
+			// si le joueur a jouer une carte
+			else if (rep >= 1 && rep <= deckplayeur.size())
+			{
+				// afficher la carte jouer
+				if (rep != 1)
+				{
+					rep -= 1;
+				}
+				cout << "le joueur " << playeurs[i].getName() << " a jouer la carte " << deckplayeur[rep - 1].getName() << endl;
+				// jouer la carte
 
                 /*
                     todo: effectuer l'action de la carte
@@ -236,6 +240,3 @@ vector<Carte> piocherCarte(std::vector<Carte> deck, Playeur playeur, Jeu game)
 	return deckplayeur;
 
 }
-
-
-
