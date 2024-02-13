@@ -1,7 +1,8 @@
 
 #include "effetCarte.h"
 
-void effetAction(std::string NameCarte) {
+void effetAction(Carte carte, Playeur cible)
+{
 
 }
 
