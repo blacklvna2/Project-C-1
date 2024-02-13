@@ -18,7 +18,7 @@ void effectCartePerso(Playeur Playeur, Carte carte)
 }
 
 void effectCartArme(CArme carte, Playeur playeur, Playeur cible, int distance) {
-    if (carte.getPrecision() >= distance && playeur.getStatus())
+    if (carte.getPrecision() >= distance && playeur.getStatus() == "up")
         {
 		vector<Carte> tableaucarte = cible.getDeckPlayer();
 		Perso persoCible = cible.getPerso();
