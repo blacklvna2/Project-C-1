@@ -173,7 +173,6 @@ void InitialisationJoueur() {
             cout << deckplayeur[j].getName() << " ";
         }
         cout << endl;
-
         while (true) {
             attententRepPlayer(playeurs, game);
         }

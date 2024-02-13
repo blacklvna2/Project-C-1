@@ -10,7 +10,6 @@ using namespace std;
 
 void attententRepPlayer(std::vector<Playeur> playeurs, Jeu game)
 {
-    int rep;
     int i = 0;
     while (i < game.getnbplayer()) // Change condition from <= to <
     {
@@ -27,18 +26,17 @@ void attententRepPlayer(std::vector<Playeur> playeurs, Jeu game)
         int l = 1;
         for (size_t k = 0; k < deckplayeur.size(); k++)
         {
-            cout << "pour jouer la carte " << ": " << deckplayeur[k].getName() << " entrer " << l << endl;
+            cout << " entrez " << l << " pour jouer la carte " << ": " << deckplayeur[k].getName()  << endl;
             l++;
         }
         int piocher = static_cast<int>(deckplayeur.size()) + 1; // Use static_cast to convert size_t to int
         cout << "pour piocher une carte entrez " << piocher << endl;
-
-        rep << EntreNombre();
+        int rep = EntreNombre();
 
         // si le joueur a jouer une carte
         if (rep >= 1 && rep <= static_cast<int>(deckplayeur.size())) // Use static_cast to convert size_t to int
         {
-            cout << "le joueur " << playeurs[i].getName() << " a jouer la carte " << deckplayeur[rep].getName() << endl;
+            cout << "le joueur " << playeurs[i].getName() << " à joué la carte " << deckplayeur[rep].getName() << endl;
             // jouer la carte
 
             /*
@@ -67,7 +65,7 @@ void piocherCarte(std::vector<Carte> deck, Playeur playeur, Jeu game)
 {
 	// piocher une carte
 	// fais la finction ajouter la carte au deck du joueur
-	playeur.getDeckPlayer().push_back(deck[0]);
+	playeur.getDeckPlayer().push_back(deck[1]);
 	// afficher la carte piocher
 	cout << "Le joueur " << playeur.getName() << " a piocher la carte " << deck[0].getName() << endl;
 	// suprimer la carte du deck
