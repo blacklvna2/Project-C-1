@@ -2,17 +2,16 @@
 
 #include <string>
 #include <vector>
-#include "Carte.h"
-#include "Playeur.h"
-#include "Fonction.h"
-#include "distancePlayeur.h"
-
-#include <string>
 #include <iostream>
+#include <string>
 #include <vector>
 #include <algorithm>
 #include <random>
 #include <windows.h>
+#include "Carte.h"
+#include "Playeur.h"
+#include "Fonction.h"
+#include "distancePlayeur.h"
 #include "Carte.h"
 #include "CAction.h"
 #include "CArme.h"
@@ -30,6 +29,6 @@
 #include "tourPlayeur.h"
 
 void effetAction(Carte carte, Playeur cible);
-void effectCartArme(Carte carte, Playeur* playeur, Playeur* cible);
-void effectCartPerma(Carte carte, Playeur* playeur);
+void effectCartArme(Carte carte, Playeur playeur, Playeur cible);
+void effectCartPerma(Carte carte, Playeur playeur);
 void effectCartePerso(Playeur Playeur, Carte carte);
