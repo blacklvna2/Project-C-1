@@ -6,6 +6,7 @@
 #include "Jeu.h"
 #include <string>
 #include <algorithm>
+#include "Fonction.h"
 
 
 using namespace std;
@@ -37,7 +38,7 @@ void attententRepPlayer(std::vector<Playeur> playeurs, std::vector<Carte> deck, 
 			}
 
 
-			cin >> rep;
+			rep = EntreNombre();
 
 			if (rep == deckplayeur.size() + 1 || deckplayeur.empty())
 			{
