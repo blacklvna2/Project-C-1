@@ -136,6 +136,66 @@ int nbPlayers() {
     return numPlayers;
 }
 
+//void InitialisationJoueur() {
+//
+//    int numPlayers = nbPlayers();
+//    vector<Perso> personnages = initialisationPersonnage();
+//    vector<Carte> deck = InitialisationDeck();
+//    vector<Role> roles = InitialisationRole(numPlayers);
+//
+//    //shuffule
+//    random_shuffle(roles.begin(), roles.end());
+//
+//    // stockage des decks
+//    Jeu game(numPlayers, personnages, roles, deck);
+//    vector<Playeur> playeurs;
+//    string playerName;
+//    for (int i = 0; i < numPlayers; ++i) {
+//        cout << "Entrez le nom du joueur " << i + 1 << " : ";
+//        playerName = Entre();
+//        Playeur player(playerName, "up", game.getroles()[i], game.getpersonnages()[i], deck, i);
+//        playeurs.push_back(player);
+//        cout << "Le joueur " << player.getName() << " a été ajouté." << endl;
+//    }
+//
+//    int players = numPlayers;
+//    // Afficher les joueurs avec leur rôle et leur personnage
+//    for (size_t i = 0; i < playeurs.size(); ++i) {
+//        // Récupérer le rôle et le personnage du joueur i
+//        Role role = playeurs[i].getRole();
+//        Perso perso = playeurs[i].getPerso();
+//
+//        // Initialiser le deck du joueur i
+//        InitialisationDeckPlayer(deck, role.getRoleName(), playeurs[i].getId(), playeurs[i]);
+//
+//        // Récupérer le deck du joueur i
+//        vector<Carte> deckplayeur = playeurs[i].getDeckPlayer();
+//
+//        // Si le joueur a le rôle de Shogun, le mettre en première position
+//        if (role.getRoleName() == "Shogun" && i != 0) { // Vérifier si le joueur n'est pas déjà en première position
+//            std::swap(playeurs[0], playeurs[i]);
+//        }
+//
+//        // Afficher l'identifiant du joueur
+//        cout << "L'id du joueur " << i + 1 << " est : " << playeurs[i].getId() << endl;
+//
+//        // Afficher le nom du joueur, son rôle et son personnage
+//        cout << "Joueur " << i + 1 << ": " << playeurs[i].getName() << " a le rôle de " << role.getRoleName() << " et le personnage " << perso.getName() << endl;
+//
+//        // Afficher le deck du joueur i
+//        cout << "Deck de " << playeurs[i].getName() << ": ";
+//        for (size_t j = 0; j < deckplayeur.size(); ++j) {
+//            cout << deckplayeur[j].getName() << " ";
+//        }
+//        cout << endl;
+////    }
+//attententRepPlayer(playeurs, deck, game);
+//    
+//
+//    // calcule de la distance entre les joueurs de facon circulaire
+//    //int c = distance(playeurs, 1, 5);
+//    //cout << "La distance entre les joueurs 1 et 2 est : " << c << endl;
+//}
 void InitialisationJoueur() {
 
     int numPlayers = nbPlayers();
@@ -158,29 +218,44 @@ void InitialisationJoueur() {
         cout << "Le joueur " << player.getName() << " a été ajouté." << endl;
     }
 
-    int players = numPlayers;
-    // afficher les joueurs avec leur rôle et leur personnage
+    // Afficher les joueurs avec leur rôle et leur personnage
     for (size_t i = 0; i < playeurs.size(); ++i) {
+        // Récupérer le rôle et le personnage du joueur i
         Role role = playeurs[i].getRole();
         Perso perso = playeurs[i].getPerso();
+
+        // Initialiser le deck du joueur i
         InitialisationDeckPlayer(deck, role.getRoleName(), playeurs[i].getId(), playeurs[i]);
+
+        // Récupérer le deck du joueur i
         vector<Carte> deckplayeur = playeurs[i].getDeckPlayer();
-        cout << "L'id du joueur " << i + 1 << " est : " << playeurs[i].getId() << endl;
 
-        cout << "Joueur " << i + 1 << ": " << playeurs[i].getName() << " a le rôle de " << role.getRoleName() << " et le personnage " << perso.getName() << endl;
+        //// Afficher l'identifiant du joueur
+        //cout << "L'id du joueur " << i + 1 << " est : " << playeurs[i].getId() << endl;
 
-        cout << "Deck du joueur " << i + 1 << ": ";
-        for (size_t j = 0; j < deckplayeur.size(); ++j) {
-            cout << deckplayeur[j].getName() << " ";
+        //// Afficher le nom du joueur, son rôle et son personnage
+        //cout << "Joueur " << i + 1 << ": " << playeurs[i].getName() << " a le rôle de " << role.getRoleName() << " et le personnage " << perso.getName() << endl;
+
+        //// Afficher le deck du joueur i
+        //cout << "Deck de " << playeurs[i].getName() << ": ";
+        //for (size_t j = 0; j < deckplayeur.size(); ++j) {
+        //    cout << deckplayeur[j].getName() << " ";
+        //}
+        //cout << endl;
+
+        // Si le joueur a le rôle de Shogun, le mettre en première position
+        if (role.getRoleName() == "Shogun" && i != 0) { // Vérifier si le joueur n'est pas déjà en première position
+            std::swap(playeurs[0], playeurs[i]);
+            cout << "Le joueur " << playeurs[0].getName() << " a le rôle de Shogun et est en première position." << endl;
+            // Inverser les ID du Shogun et du premier joueur
+            int tempId = playeurs[0].getId();
+            playeurs[0].setId(playeurs[i].getId());
+            playeurs[i].setId(tempId);
         }
-        cout << endl;
-    }
-    
-    
-    attententRepPlayer(playeurs, deck, game);
-    
 
-    // calcule de la distance entre les joueurs de facon circulaire
-    //int c = distance(playeurs, 1, 5);
-    //cout << "La distance entre les joueurs 1 et 2 est : " << c << endl;
+
+    }
+
+    // La suite de votre fonction...
+    attententRepPlayer(playeurs, deck, game);
 }

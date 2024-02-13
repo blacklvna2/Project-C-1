@@ -25,8 +25,6 @@ int main()
 
     Titre();
     Menu();
-    Victoire();
-
 
     return 0;
 }
