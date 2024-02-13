@@ -44,9 +44,9 @@ void attententRepPlayer(std::vector<Playeur> playeurs, std::vector<Carte> deck, 
 			{
 				vector<Carte> deckplayeur = piocherCarte(deck, playeurs[i], game);
 				//aficher la carte piocher depuit le deck du joueur
-				
-				cout << "Le joueur " << playeurs[i].getName() << " a piocher la carte " << playeurs[i].getDeckPlayer().back().getName() << endl;
 				playeurs[i].setDeckPlayer(deckplayeur);
+				int x = deckplayeur.size();
+				cout << "Le joueur " << playeurs[i].getName() << " a piocher la carte " << deckplayeur[x-1].getName() << endl;
 				i++;
 			}
 			// si le joueur a jouer une carte
@@ -91,6 +91,3 @@ vector<Carte> piocherCarte(std::vector<Carte> deck, Playeur playeur, Jeu game)
 	return deckplayeur;
 
 }
-
-
-
