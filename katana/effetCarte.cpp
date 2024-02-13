@@ -21,6 +21,6 @@
 #include "role.h"
 #include "tourPlayeur.h"
 
-int effetAction(std::string NameCarte) {
-
-}
+//int effetAction(std::string NameCarte) {
+//
+//}

@@ -420,62 +420,102 @@ vector<Carte> deckPlayerSubset(vector<Carte>::iterator start, vector<Carte>::ite
 	return subset;
 }
 
+//void InitialisationDeckPlayer(std::vector<Carte>& deck, const std::string role, int id, Playeur& playeur)
+//{
+//    std::vector<Carte> deckJoueur;
+//    if (role == "Shogun")
+//    {
+//        //si le joueur et shogune prend les 4 premier carte du deck est est les supprime
+//        for (int i = 0; i < 4; i++)
+//        {
+//            deckJoueur.push_back(deck[i]);
+//        }
+//        deck.erase(deck.begin(), deck.begin() + 4);
+//        playeur.setDeckPlayer(deckJoueur);
+//    }
+//
+//    else
+//    {
+//        switch (id)
+//        {
+//        case 0:
+//        case 1:
+//        case 2:
+//        {
+//            //si le joueur et ninja prend les 5 premier carte du deck est est les supprime
+//            for (int i = 0; i < 5; i++)
+//            {
+//                deckJoueur.push_back(deck[i]);
+//            }
+//            deck.erase(deck.begin(), deck.begin() + 5);
+//            playeur.setDeckPlayer(deckJoueur);
+//        }
+//        break;
+//        case 3:
+//        case 4:
+//        {
+//            //si le joueur et samourai prend les 6 premier carte du deck est est les supprime
+//            for (int i = 0; i < 6; i++)
+//            {
+//                deckJoueur.push_back(deck[i]);
+//            }
+//            deck.erase(deck.begin(), deck.begin() + 6);
+//            playeur.setDeckPlayer(deckJoueur);
+//        }
+//        break;
+//        case 5:
+//        case 6:
+//        {
+//            for (int i = 0; i < 7; i++)
+//            {
+//                deckJoueur.push_back(deck[i]);
+//            }
+//            deck.erase(deck.begin(), deck.begin() + 7);
+//            playeur.setDeckPlayer(deckJoueur);
+//        }
+//        break;
+//        default:
+//            break;
+//        }
+//    }
+//}
 void InitialisationDeckPlayer(std::vector<Carte>& deck, const std::string role, int id, Playeur& playeur)
 {
-    std::vector<Carte> deckJoueur;
-    if (role == "Shogun")
-    {
-        //si le joueur et shogune prend les 4 premier carte du deck est est les supprime
-        for (int i = 0; i < 4; i++)
-        {
-            deckJoueur.push_back(deck[i]);
-        }
-        deck.erase(deck.begin(), deck.begin() + 4);
-        playeur.setDeckPlayer(deckJoueur);
-    }
+	std::vector<Carte> deckJoueur;
+	int numCartes = 0;
 
-    else
-    {
-        switch (id)
-        {
-        case 0:
-        case 1:
-        case 2:
-        {
-            //si le joueur et ninja prend les 5 premier carte du deck est est les supprime
-            for (int i = 0; i < 5; i++)
-            {
-                deckJoueur.push_back(deck[i]);
-            }
-            deck.erase(deck.begin(), deck.begin() + 5);
-            playeur.setDeckPlayer(deckJoueur);
-        }
-        break;
-        case 3:
-        case 4:
-        {
-            //si le joueur et samourai prend les 6 premier carte du deck est est les supprime
-            for (int i = 0; i < 6; i++)
-            {
-                deckJoueur.push_back(deck[i]);
-            }
-            deck.erase(deck.begin(), deck.begin() + 6);
-            playeur.setDeckPlayer(deckJoueur);
-        }
-        break;
-        case 5:
-        case 6:
-        {
-            for (int i = 0; i < 7; i++)
-            {
-                deckJoueur.push_back(deck[i]);
-            }
-            deck.erase(deck.begin(), deck.begin() + 7);
-            playeur.setDeckPlayer(deckJoueur);
-        }
-        break;
-        default:
-            break;
-        }
-    }
+	if (role == "Shogun")
+	{
+		numCartes = 4;
+	}
+	else
+	{
+		switch (id)
+		{
+		case 0:
+		case 1:
+		case 2:
+			numCartes = 5;
+			break;
+		case 3:
+		case 4:
+			numCartes = 6;
+			break;
+		case 5:
+		case 6:
+			numCartes = 7;
+			break;
+		default:
+			break;
+		}
+	}
+
+	// Distribuer les cartes au joueur
+	for (int i = 0; i < numCartes; i++)
+	{
+		deckJoueur.push_back(deck[i]);
+	}
+	deck.erase(deck.begin(), deck.begin() + numCartes);
+	playeur.setDeckPlayer(deckJoueur);
 }
+
