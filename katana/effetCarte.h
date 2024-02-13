@@ -28,7 +28,7 @@
 #include "role.h"
 #include "tourPlayeur.h"
 
-void effetAction(Carte carte, Playeur cible);
+void effetAction(Carte carte, Playeur cible, Playeur playeur);
 void effectCartArme(Carte carte, Playeur playeur, Playeur cible);
-void effectCartPerma(Carte carte, Playeur playeur);
-void effectCartePerso(Playeur Playeur, Carte carte);
+void effectCartPerma(Carte carte, Playeur playeur, Playeur cible);
+void effectCartePerso(Playeur playeur, Carte carte, Playeur cible );
