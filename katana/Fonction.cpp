@@ -126,9 +126,9 @@ void Victoire()
 }
 
 int nbPlayers() {
-    int numPlayers;
+    
     cout << "Entrez le nombre de joueurs (de 3 à 7) : ";
-    cin >> numPlayers;
+    int numPlayers = EntreNombre();
     while (numPlayers < 3 || numPlayers > 7) {
         cout << "Le nombre de joueurs doit être compris entre 3 et 7. Entrez à nouveau le nombre de joueurs : ";
         cin >> numPlayers;
