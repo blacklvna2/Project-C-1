@@ -134,6 +134,7 @@
     <ClCompile Include="DescPerso.cpp" />
     <ClCompile Include="distancePlayeur.cpp" />
     <ClCompile Include="distancePlayeur.h" />
+    <ClCompile Include="effetCarte.cpp" />
     <ClCompile Include="Fonction.cpp" />
     <ClCompile Include="initgame.cpp" />
     <ClCompile Include="jeu.cpp" />
@@ -149,6 +150,7 @@
     <ClInclude Include="CArme.h" />
     <ClInclude Include="CPerma.h" />
     <ClInclude Include="DescPerso.h" />
+    <ClInclude Include="effetCarte.h" />
     <ClInclude Include="Fonction.h" />
     <ClInclude Include="initgame.h" />
     <ClInclude Include="jeu.h" />
