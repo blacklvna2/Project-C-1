@@ -75,21 +75,21 @@ int Menu()
         cout << "Vous avez choisi de lire les règles" << endl;
         system("start http://jeuxstrategie1.free.fr/jeu_katana/regle.pdf");
         Menu();
+        break;
     }
-    break;
     case 3:
     {
         SetConsoleOutputCP(1252);
         cout << "Vous avez choisi de quitter le jeu" << endl;
+        break;
     }
-    break;
     default:
     {
         SetConsoleOutputCP(1252);
         cout << "Vous n'avez pas choisi une option valide" << endl;
         Menu();
+        break;
     }
-    break;
     }
 
     return 0;
@@ -128,15 +128,16 @@ void Victoire()
 int nbPlayers() {
     int numPlayers;
     cout << "Entrez le nombre de joueurs (de 3 à 7) : ";
-    numPlayers = EntreNombre();
+    cin >> numPlayers;
     while (numPlayers < 3 || numPlayers > 7) {
         cout << "Le nombre de joueurs doit être compris entre 3 et 7. Entrez à nouveau le nombre de joueurs : ";
-        numPlayers = EntreNombre();
+        cin >> numPlayers;
     }
     return numPlayers;
 }
 
 void InitialisationJoueur() {
+
     int numPlayers = nbPlayers();
     vector<Perso> personnages = initialisationPersonnage();
     vector<Carte> deck = InitialisationDeck();
@@ -173,10 +174,12 @@ void InitialisationJoueur() {
             cout << deckplayeur[j].getName() << " ";
         }
         cout << endl;
-        while (true) {
-            attententRepPlayer(playeurs, game);
-        }
     }
+    
+    
+    attententRepPlayer(playeurs, deck, game);
+    
+
     // calcule de la distance entre les joueurs de facon circulaire
     //int c = distance(playeurs, 1, 5);
     //cout << "La distance entre les joueurs 1 et 2 est : " << c << endl;
